@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useRef } from "react"
 import { ContainerFlex, Title } from "../../styles/globalStyles"
 import { theme } from "../../theme/theme"
 import { ProfileImage } from "./aboutStyles"
@@ -8,6 +8,7 @@ import { SubtitleAboutNameEN, SubtitleAboutNameES, SubtitleAboutRoleEN, Subtitle
 const About = () => {
     const language = useContext(LanguageContext)
     const darkTheme = useContext(ThemeContext)
+    const headlineRef = useRef(null);
 
     return (
         <ContainerFlex 
@@ -16,6 +17,7 @@ const About = () => {
             justifycontent='center'
             alignitems='center'
             flexdirectionmobile='column'
+            ref={headlineRef}
         >
             <ContainerFlex 
                 flexdirection='column'

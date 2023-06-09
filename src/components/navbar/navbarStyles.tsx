@@ -37,6 +37,8 @@ interface PropsA {
 
 export const Navbar = styled.div<PropsNavbar>`
     display: flex;
+    position: absolute;
+    z-index: 3;
     flex-direction: ${(props) => props.flexdirection};
     justify-content: ${(props) => props.justifycontent};
     align-items: ${(props) => props.alignitems};

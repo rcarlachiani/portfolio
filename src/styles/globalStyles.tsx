@@ -23,6 +23,9 @@ interface PropsContainerFlex {
     paddingmobile?: string,
     border?: string,
     backgroundcolor?: string,
+    overflowy?: string,
+    overscrolly?: string,
+    scrollsnap?: string,
 }
 
 interface PropsSection {
@@ -57,6 +60,13 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
     padding: ${(props) => props.padding};
     border: ${(props) => props.border};
     background-color: ${(props) => props.backgroundcolor};
+    overflow-y: ${(props) => props.overflowy};
+    overscroll-behavior-y: ${(props) => props.overscrolly};
+    scroll-snap-type: ${(props) => props.scrollsnap};
+    scrollbar-width: none;
+    ::-webkit-scrollbar{
+      display: none;
+    }
 
     @media (max-width: 992px) {
         flex-direction: ${(props) => props.flexdirectiontablet};
@@ -72,9 +82,12 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
 export const Section = styled.section<PropsSection>`
     display: flex;
+    width: 100%;
+    height: 100vh;
     position: relative;
     z-index: 1;
     justify-content: ${(props) => props.justifycontent ? props.justifycontent : 'center'};
+    scroll-snap-align: center;
 `
 
 export const Text = styled.p<PropsText>`

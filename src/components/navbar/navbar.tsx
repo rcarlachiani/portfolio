@@ -24,6 +24,7 @@ const NavbarComponent = ({ setDarkTheme, setLanguage }: Props) => {
                 width='100%' 
                 height='50px' 
                 justifycontent='space-between'
+                padding='inherit'
             >
                 <ContainerFlex>
                     <NavbarItem 

@@ -25,29 +25,34 @@ function App() {
             backgroundcolor={darkTheme ? theme.colors.black : theme.colors.white}
           >
             <NavbarComponent setDarkTheme={setDarkTheme} setLanguage={setLanguage}/>
-            <Section>
-              <About />
-            </Section>
-            <Section>
-              <ContainerFlex height='100vh'>
-                Skills
-              </ContainerFlex>
-            </Section>
-            <Section>
-              <ContainerFlex height='100vh'>
-                Proyects
-              </ContainerFlex>
-            </Section>
-            <Section>
-              <ContainerFlex height='100vh'>
-                Experience
-              </ContainerFlex>
-            </Section>
+            <ContainerFlex
+              flexdirection='column'
+              alignitems='center'
+              overflowy='auto'
+              overscrolly='contain'
+              scrollsnap='y mandatory'
+              width='100%'
+              height='100vh'
+              className='container' 
+            >
+              <Section>
+                <About />
+              </Section>
+              <Section>
+                <About />
+              </Section>
+              <Section>
+                <About />
+              </Section>
+              <Section>
+                <About />
+              </Section>
+            </ContainerFlex>
             <ContainerFlex 
               position='fixed' 
               bottom='0'
               padding='10px 0px'
-              height='50px' 
+              height='80px' 
               justifycontent='center'
             >
               <Lottie animationData={darkTheme ? animationDataWhite : animationData} loop={true}/>
