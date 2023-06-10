@@ -1,6 +1,27 @@
-export const TitleAboutEN = 'Hi!'
-export const SubtitleAboutNameEN = "I'm Rodrigo&nbsp"
-export const SubtitleAboutRoleEN = "Frontend Web Developer"
-export const TitleAboutES = '¡Hola!'
-export const SubtitleAboutNameES = "Soy Rodrigo&nbsp"
-export const SubtitleAboutRoleES = "Desarrollador Web Frontend"
+export const TitlesEN = {
+    greeting: 'Hi!',
+    skills: 'These are the technolgies I work with'
+}
+
+export const SubtitlesEN = {
+    whoIAm: "I'm Rodrigo&nbsp",
+    role: "Frontend Web Developer",
+}
+
+export const TextEN = {
+    
+}
+
+export const TitlesES = {
+    greeting: '¡Hola!',
+    skills: 'Éstas son las tecnologías con las que trabajo'
+}
+
+export const SubtitlesES = {
+    whoIAm: "Soy Rodrigo&nbsp",
+    role: "Desarrollador Web Frontend",
+}
+
+export const TextES = {
+    
+}

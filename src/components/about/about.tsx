@@ -3,7 +3,7 @@ import { ContainerFlex, Title } from "../../styles/globalStyles"
 import { theme } from "../../theme/theme"
 import { ProfileImage } from "./aboutStyles"
 import { LanguageContext, ThemeContext } from "../../context/context"
-import { SubtitleAboutNameEN, SubtitleAboutNameES, SubtitleAboutRoleEN, SubtitleAboutRoleES, TitleAboutEN, TitleAboutES } from "../../translation/translation"
+import { SubtitlesEN, SubtitlesES, TitlesEN, TitlesES } from "../../translation/translation"
 
 const About = () => {
     const language = useContext(LanguageContext)
@@ -32,7 +32,7 @@ const About = () => {
                     fontsizemobile="15vw"
                     textalign='end'
                     textalignmobile='center'
-                    dangerouslySetInnerHTML={{__html: language === 'en' ? TitleAboutEN : TitleAboutES }}
+                    dangerouslySetInnerHTML={{__html: language === 'en' ? TitlesEN.greeting : TitlesES.greeting }}
                 />
                 <Title
                     color={darkTheme ? theme.colors.white : theme.colors.black}  
@@ -41,7 +41,7 @@ const About = () => {
                     fontsizemobile="9.5vw"
                     textalign='end'
                     textalignmobile='center' 
-                    dangerouslySetInnerHTML={{__html: language === 'en' ? SubtitleAboutNameEN : SubtitleAboutNameES }}
+                    dangerouslySetInnerHTML={{__html: language === 'en' ? SubtitlesEN.whoIAm : SubtitlesES.whoIAm }}
                 />
                 <Title
                     color={darkTheme ? theme.colors.white : theme.colors.black}  
@@ -50,7 +50,7 @@ const About = () => {
                     fontsizemobile={language === 'en' ? '4.5vw' : '4.2vw'}
                     textalign='end' 
                     textalignmobile='center'
-                    dangerouslySetInnerHTML={{__html: language === 'en' ? SubtitleAboutRoleEN : SubtitleAboutRoleES }}
+                    dangerouslySetInnerHTML={{__html: language === 'en' ? SubtitlesEN.role : SubtitlesES.role }}
                 />
             </ContainerFlex>
             <ProfileImage src='/images/profile-picture.jpg'/>

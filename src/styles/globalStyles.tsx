@@ -2,7 +2,6 @@ import { styled } from "styled-components";
 import { theme } from "../theme/theme";
 
 interface PropsContainerFlex {
-    display?: string,
     position?: string,
     top?: string,
     bottom?: string,
@@ -28,12 +27,40 @@ interface PropsContainerFlex {
     scrollsnap?: string,
 }
 
+interface PropsContainerGrid {
+    gridtemplatecols?: string,
+    gridtemplaterows?: string,
+    gap?: string,
+    gapmobile?: string,
+    position?: string,
+    top?: string,
+    bottom?: string,
+    justifyitems?: string,
+    alignitems?: string,
+    width?: string,
+    height?: string,
+    maxwidth?: string,
+    maxheight?: string,
+    margin?: string,
+    padding?: string,
+    marginmobile?: string,
+    paddingmobile?: string,
+    border?: string,
+    backgroundcolor?: string,
+    overflowy?: string,
+    overscrolly?: string,
+    scrollsnap?: string,
+}
+
 interface PropsSection {
     display?: string,
     justifycontent?: string,
 }
 
 interface PropsText {
+    display?: string,
+    gridcolumn?: string,
+    gridrow?: string,
     fontSize?: string,
     fontsizetablet?: string,
     fontsizemobile?: string,
@@ -41,6 +68,9 @@ interface PropsText {
     color?: string,
     textalign?: string,
     textalignmobile?: string,
+    alignself?: string,
+    padding?: string,
+    margin?: string,
 }
 
 export const ContainerFlex = styled.div<PropsContainerFlex>`
@@ -80,6 +110,42 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
     }
 `
 
+export const ContainerGrid = styled.div<PropsContainerGrid>`
+    display: grid;
+    grid-template-columns: ${(props) => props.gridtemplatecols};
+    grid-template-rows: ${(props) => props.gridtemplaterows};
+    gap: ${(props) => props.gap};
+    position: ${(props) => props.position};
+    top: ${(props) => props.top};
+    bottom: ${(props) => props.bottom};
+    justify-items: ${(props) => props.justifyitems};
+    align-items: ${(props) => props.alignitems};
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    max-width: ${(props) => props.maxwidth};
+    max-height: ${(props) => props.maxheight};
+    margin: ${(props) => props.margin};
+    padding: ${(props) => props.padding};
+    border: ${(props) => props.border};
+    background-color: ${(props) => props.backgroundcolor};
+    overflow-y: ${(props) => props.overflowy};
+    overscroll-behavior-y: ${(props) => props.overscrolly};
+    scroll-snap-type: ${(props) => props.scrollsnap};
+    scrollbar-width: none;
+    ::-webkit-scrollbar{
+      display: none;
+    }
+
+    @media (max-width: 992px) {
+        
+    }
+
+    @media (max-width: 576px) {
+        margin: ${(props) => props.marginmobile};
+        padding: ${(props) => props.paddingmobile};
+    }
+`
+
 export const Section = styled.section<PropsSection>`
     display: flex;
     width: 100%;
@@ -95,6 +161,8 @@ export const Text = styled.p<PropsText>`
     line-height: ${(props) => props.lineheight};
     color: ${(props) => props.color ? props.color : theme.colors.black};
     text-align: ${(props) => props.textalign};
+    padding: ${(props) => props.padding};
+    margin: ${(props) => props.margin};
 
     @media (max-width: 992px) {
         font-size: ${(props) => props.fontsizetablet};
@@ -107,13 +175,19 @@ export const Text = styled.p<PropsText>`
 `
 
 export const Title = styled.h1<PropsText>`
+    display: ${(props) => props.display};
+    grid-column: ${(props) => props.gridcolumn};
+    grid-row: ${(props) => props.gridrow};
     font-size: ${(props) => props.fontSize};
     line-height: ${(props) => props.lineheight};
     color: ${(props) => props.color};
     text-align: ${(props) => props.textalign};
+    align-self: ${(props) => props.alignself};
+    padding: ${(props) => props.padding};
+    margin: ${(props) => props.margin};
 
     @media (max-width: 992px) {
-        font-size: ${(props) => props.fontsizetablet};
+        margin: ${(props) => props.fontsizetablet};
     }
 
     @media (max-width: 576px) {

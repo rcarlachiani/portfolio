@@ -9,6 +9,7 @@ import animationData from './assets/scroll-animation.json';
 import animationDataWhite from './assets/scroll-animation-white.json';
 import About from './components/about/about'
 import ParticlesBackground from './components/particlesBackground/particlesBackground'
+import Skills from './components/skills/skills'
 
 function App() {
   const [darkTheme, setDarkTheme] = useState<boolean>(false)
@@ -39,7 +40,7 @@ function App() {
                 <About />
               </Section>
               <Section>
-                <About />
+                <Skills />
               </Section>
               <Section>
                 <About />
