@@ -2,7 +2,12 @@ import { useContext } from "react"
 import { theme } from "../../theme/theme"
 import { ThemeContext } from "../../context/context"
 
-export const CssIcon = () => {
+interface Props {
+    width?: string | number,
+    height?: string | number,
+}
+
+export const CssIcon: React.FC<Props> = ({ width, height }) => {
     const darkTheme = useContext(ThemeContext)
 
     return(
@@ -11,8 +16,8 @@ export const CssIcon = () => {
             version="1.1" 
             xmlns="http://www.w3.org/2000/svg" 
             xmlnsXlink="http://www.w3.org/1999/xlink"  
-            width="80px"
-            height="80px" 
+            width={width ? width : '9vw'} 
+            height={height ? height : '9vh'} 
             viewBox="0 0 512 512" 
             enableBackground="new 0 0 512 512" 
             xmlSpace="preserve"

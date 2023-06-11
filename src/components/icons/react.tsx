@@ -2,13 +2,18 @@ import { useContext } from "react"
 import { theme } from "../../theme/theme"
 import { ThemeContext } from "../../context/context"
 
-export const ReactIcon = () => {
+interface Props {
+    width?: string | number,
+    height?: string | number,
+}
+
+export const ReactIcon: React.FC<Props> = ({ width, height }) => {
     const darkTheme = useContext(ThemeContext)
 
     return(
         <svg 
-            width="80px" 
-            height="80px" 
+            width={width ? width : '9vw'} 
+            height={height ? height : '9vh'}
             viewBox="0 0 24 24" 
             xmlns="http://www.w3.org/2000/svg"
             fill={darkTheme ? theme.colors.white : theme.colors.black}

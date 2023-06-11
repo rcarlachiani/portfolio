@@ -28,9 +28,12 @@ interface PropsContainerFlex {
 }
 
 interface PropsContainerGrid {
-    gridtemplatecols?: string,
-    gridtemplaterows?: string,
+    templatecols?: string,
+    templaterows?: string,
+    templatecolstablet?: string,
+    templaterowstablet?: string,
     gap?: string,
+    gaptablet?: string,
     gapmobile?: string,
     position?: string,
     top?: string,
@@ -112,8 +115,8 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
 export const ContainerGrid = styled.div<PropsContainerGrid>`
     display: grid;
-    grid-template-columns: ${(props) => props.gridtemplatecols};
-    grid-template-rows: ${(props) => props.gridtemplaterows};
+    grid-template-columns: ${(props) => props.templatecols};
+    grid-template-rows: ${(props) => props.templaterows};
     gap: ${(props) => props.gap};
     position: ${(props) => props.position};
     top: ${(props) => props.top};
@@ -137,7 +140,9 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
     }
 
     @media (max-width: 992px) {
-        
+        grid-template-columns: ${(props) => props.templatecolstablet};
+        grid-template-rows: ${(props) => props.templaterowstablet};
+        gap: ${(props) => props.gaptablet};
     }
 
     @media (max-width: 576px) {
@@ -187,7 +192,7 @@ export const Title = styled.h1<PropsText>`
     margin: ${(props) => props.margin};
 
     @media (max-width: 992px) {
-        margin: ${(props) => props.fontsizetablet};
+        font-size: ${(props) => props.fontsizetablet};
     }
 
     @media (max-width: 576px) {

@@ -1,6 +1,6 @@
 export const TitlesEN = {
     greeting: 'Hi!',
-    skills: 'These are the technolgies I work with'
+    skills: 'These are the<br> technolgies I <span>work</span> with'
 }
 
 export const SubtitlesEN = {
@@ -14,7 +14,7 @@ export const TextEN = {
 
 export const TitlesES = {
     greeting: '¡Hola!',
-    skills: 'Éstas son las tecnologías con las que trabajo'
+    skills: 'Éstas son las<br> tecnologías con las que <span>trabajo</span>'
 }
 
 export const SubtitlesES = {
