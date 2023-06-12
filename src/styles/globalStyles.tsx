@@ -11,7 +11,11 @@ interface PropsContainerFlex {
     gap?: string,
     gapmobile?: string,
     justifycontent?: string,
+    justifyself?: string,
+    justifyselfmobile?: string,
     alignitems?: string,
+    alignself?: string,
+    alignselfmobile?: string,
     width?: string,
     height?: string,
     maxwidth?: string,
@@ -32,6 +36,8 @@ interface PropsContainerGrid {
     templaterows?: string,
     templatecolstablet?: string,
     templaterowstablet?: string,
+    templatecolsmobile?: string,
+    templaterowsmobile?: string,
     gap?: string,
     gaptablet?: string,
     gapmobile?: string,
@@ -84,7 +90,9 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
     flex-direction: ${(props) => props.flexdirection};
     gap: ${(props) => props.gap};
     justify-content: ${(props) => props.justifycontent};
+    justify-self: ${(props) => props.justifyself};
     align-items: ${(props) => props.alignitems};
+    align-self: ${(props) => props.alignself};
     width: ${(props) => props.width};
     height: ${(props) => props.height};
     max-width: ${(props) => props.maxwidth};
@@ -110,6 +118,8 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
         gap: unset;
         margin: ${(props) => props.marginmobile};
         padding: ${(props) => props.paddingmobile};
+        justify-self: ${(props) => props.justifyselfmobile};
+        align-self: ${(props) => props.alignselfmobile};
     }
 `
 
@@ -146,6 +156,9 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
     }
 
     @media (max-width: 576px) {
+        grid-template-columns: ${(props) => props.templatecolsmobile};
+        grid-template-rows: ${(props) => props.templaterowsmobile};
+        gap: ${(props) => props.gapmobile};
         margin: ${(props) => props.marginmobile};
         padding: ${(props) => props.paddingmobile};
     }

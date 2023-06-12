@@ -20,30 +20,25 @@ function App() {
       <DeviceProvider>
         <LanguageContext.Provider value={language}>
           <ThemeContext.Provider value={darkTheme}>
-            <ContainerFlex 
+            <ContainerFlex
               flexdirection='column'
-              alignitems='center' 
+              alignitems='center'
+              overflowy='auto'
+              overscrolly='contain'
+              scrollsnap='y mandatory'
+              width='100%'
+              height='100vh'
+              className='container'
               padding='0px 35px' 
-              backgroundcolor={darkTheme ? theme.colors.black : theme.colors.white}
+              backgroundcolor={darkTheme ? theme.colors.black : theme.colors.white} 
             >
               <NavbarComponent setDarkTheme={setDarkTheme} setLanguage={setLanguage}/>
-              <ContainerFlex
-                flexdirection='column'
-                alignitems='center'
-                overflowy='auto'
-                overscrolly='contain'
-                scrollsnap='y mandatory'
-                width='100%'
-                height='100vh'
-                className='container' 
-              >
-                <Section>
-                  <About />
-                </Section>
-                <Section>
-                  <Skills />
-                </Section>
-              </ContainerFlex>
+              <Section>
+                <About />
+              </Section>
+              <Section>
+                <Skills />
+              </Section>
               <ContainerFlex 
                 position='fixed' 
                 bottom='0'

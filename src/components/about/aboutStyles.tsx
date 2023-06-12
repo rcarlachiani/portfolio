@@ -5,16 +5,18 @@ export const ProfileImage = styled.img`
     border-radius: 50%;
     max-width: 70%;
     height: auto;
-    padding: 0px 0px 0px 20px;
+    justify-self: baseline;
 
-    @media (max-width: 1080px) {
-        max-width: 50%;
-        height: auto;
-    }
+    // @media (max-width: 992px) {
+    //     max-width: 60%;
+    //     height: auto;
+    // }
 
     @media (max-width: 576px) {
-        max-width: 60%;
+        max-width: 50%;
         height: auto;
-        padding: 20px 0px 0px 0px;
+        justify-self: unset;
+        align-self: baseline;
+        // padding: 20px 0px 0px 0px;
     }
 `

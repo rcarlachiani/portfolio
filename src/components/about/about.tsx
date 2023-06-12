@@ -1,5 +1,5 @@
 import { useContext, useRef } from "react"
-import { ContainerFlex, Title } from "../../styles/globalStyles"
+import { ContainerFlex, ContainerGrid, Title } from "../../styles/globalStyles"
 import { theme } from "../../theme/theme"
 import { ProfileImage } from "./aboutStyles"
 import { LanguageContext, ThemeContext } from "../../context/context"
@@ -11,19 +11,26 @@ const About = () => {
     const headlineRef = useRef(null);
 
     return (
-        <ContainerFlex 
-            height='100vh' 
-            width='100vw' 
-            justifycontent='center'
+        <ContainerGrid 
+            height='inherit' 
+            width='inherit' 
+            templatecols='repeat(2, 1fr)'
+            templatecolsmobile='1fr'
+            templaterows='1fr'
+            templaterowsmobile='repeat(2, 1fr)'
+            gap='5vw'
+            gapmobile='unset'
+            justifyitems='center'
             alignitems='center'
-            flexdirectionmobile='column'
             ref={headlineRef}
         >
             <ContainerFlex 
                 flexdirection='column'
-                padding='0px 20px 0px 0px'
-                paddingmobile='0px 0px 20px 0px'
                 width='fit-content'
+                justifyself='end'
+                justifyselfmobile='unset'
+                alignselfmobile='end'
+                marginmobile='0px 0px 50px 0px'
             >
                 <Title 
                     color={theme.colors.orange} 
@@ -53,8 +60,8 @@ const About = () => {
                     dangerouslySetInnerHTML={{__html: language === 'en' ? SubtitlesEN.role : SubtitlesES.role }}
                 />
             </ContainerFlex>
-            <ProfileImage src='/images/profile-picture.jpg'/>
-        </ContainerFlex>
+            <ProfileImage src='/images/profile-picture.jpg' />
+        </ContainerGrid>
     )
 }
 

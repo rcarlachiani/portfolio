@@ -6,6 +6,10 @@
 
 .html, body {
   font-family: 'Ubuntu', sans-serif;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 span {

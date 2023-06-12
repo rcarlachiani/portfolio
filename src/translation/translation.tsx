@@ -4,7 +4,7 @@ export const TitlesEN = {
 }
 
 export const SubtitlesEN = {
-    whoIAm: "I'm Rodrigo&nbsp",
+    whoIAm: "I'm Rodrigo",
     role: "Frontend Web Developer",
 }
 
@@ -18,7 +18,7 @@ export const TitlesES = {
 }
 
 export const SubtitlesES = {
-    whoIAm: "Soy Rodrigo&nbsp",
+    whoIAm: "Soy Rodrigo",
     role: "Desarrollador Web Frontend",
 }
 
