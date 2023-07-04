@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react"
+import { useContext } from "react"
 import { ContainerFlex, ContainerGrid, Text, Title } from "../../styles/globalStyles"
 import { theme } from "../../theme/theme"
 import { DeviceContext, LanguageContext, ThemeContext } from "../../context/context"
@@ -21,7 +21,6 @@ const Skills = () => {
     const language = useContext(LanguageContext);
     const darkTheme = useContext(ThemeContext);
     const { isMobile } = useContext(DeviceContext);
-    const headlineRef = useRef(null);
     const icons = [
         <HtmlIcon key={'HTML5'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>, 
         <CssIcon key={'CSS3'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>, 
@@ -45,7 +44,6 @@ const Skills = () => {
             templaterows='1fr 3fr'
             justifyitems='center'
             alignitems='center'
-            ref={headlineRef}
         >
             <Title
                 color={darkTheme ? theme.colors.white : theme.colors.black} 

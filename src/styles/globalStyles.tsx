@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import { theme } from "../theme/theme";
 
 interface PropsContainerFlex {
+    display?: string,
     position?: string,
     top?: string,
     bottom?: string,
@@ -25,10 +26,17 @@ interface PropsContainerFlex {
     marginmobile?: string,
     paddingmobile?: string,
     border?: string,
+    borderradius?: string,
     backgroundcolor?: string,
+    backgroundblur?: string,
+    boxshadow?: string,
     overflowy?: string,
+    overflowx?: string,
     overscrolly?: string,
+    overscrollx?: string,
     scrollsnap?: string,
+    scrollsnapalign?: string,
+    cursor?: string,
 }
 
 interface PropsContainerGrid {
@@ -57,7 +65,9 @@ interface PropsContainerGrid {
     border?: string,
     backgroundcolor?: string,
     overflowy?: string,
+    overflowx?: string,
     overscrolly?: string,
+    overscrollx?: string,
     scrollsnap?: string,
 }
 
@@ -83,7 +93,7 @@ interface PropsText {
 }
 
 export const ContainerFlex = styled.div<PropsContainerFlex>`
-    display: flex;
+    display: ${(props) => props.display? props.display : 'flex'};
     position: ${(props) => props.position};
     top: ${(props) => props.top};
     bottom: ${(props) => props.bottom};
@@ -100,10 +110,17 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
     margin: ${(props) => props.margin};
     padding: ${(props) => props.padding};
     border: ${(props) => props.border};
+    border-radius: ${(props) => props.borderradius};
     background-color: ${(props) => props.backgroundcolor};
+    backdrop-filter: ${(props) => props.backgroundblur};
+    box-shadow: ${(props) => props.boxshadow};
+    cursor: ${(props) => props.cursor};
     overflow-y: ${(props) => props.overflowy};
+    overflow-x: ${(props) => props.overflowx};
     overscroll-behavior-y: ${(props) => props.overscrolly};
+    overscroll-behavior-x: ${(props) => props.overscrollx};
     scroll-snap-type: ${(props) => props.scrollsnap};
+    scroll-snap-align: ${(props) => props.scrollsnapalign};
     scrollbar-width: none;
     ::-webkit-scrollbar{
       display: none;
@@ -142,7 +159,9 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
     border: ${(props) => props.border};
     background-color: ${(props) => props.backgroundcolor};
     overflow-y: ${(props) => props.overflowy};
+    overflow-x: ${(props) => props.overflowx};
     overscroll-behavior-y: ${(props) => props.overscrolly};
+    overscroll-behavior-x: ${(props) => props.overscrollx};
     scroll-snap-type: ${(props) => props.scrollsnap};
     scrollbar-width: none;
     ::-webkit-scrollbar{

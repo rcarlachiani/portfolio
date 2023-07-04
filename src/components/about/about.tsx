@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react"
+import { useContext } from "react"
 import { ContainerFlex, ContainerGrid, Title } from "../../styles/globalStyles"
 import { theme } from "../../theme/theme"
 import { ProfileImage } from "./aboutStyles"
@@ -6,9 +6,8 @@ import { LanguageContext, ThemeContext } from "../../context/context"
 import { SubtitlesEN, SubtitlesES, TitlesEN, TitlesES } from "../../translation/translation"
 
 const About = () => {
-    const language = useContext(LanguageContext)
-    const darkTheme = useContext(ThemeContext)
-    const headlineRef = useRef(null);
+    const language = useContext(LanguageContext);
+    const darkTheme = useContext(ThemeContext);
 
     return (
         <ContainerGrid 
@@ -22,7 +21,6 @@ const About = () => {
             gapmobile='unset'
             justifyitems='center'
             alignitems='center'
-            ref={headlineRef}
         >
             <ContainerFlex 
                 flexdirection='column'

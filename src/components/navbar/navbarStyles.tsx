@@ -72,8 +72,8 @@ export const NavbarLink = styled.a<PropsA>`
     display: flex;
     width: 100%;
     height: fit-content;
-    margin: ${(props) => props.margin ? props.margin : '5px'};
-    padding: ${(props) => props.padding ? props.padding : '10px'};
+    margin: ${(props) => props.margin ? props.margin : '0px 5px 0px 5px'};
+    padding: ${(props) => props.padding ? props.padding : '0px 10px 0px 10px'};
 `
 
 

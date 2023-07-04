@@ -2,14 +2,19 @@ import { useContext } from "react"
 import { ThemeContext } from "../../context/context"
 import { theme } from "../../theme/theme"
 
-export const Linkedin = () => {
+interface Props {
+    width?: string | number,
+    height?: string | number,
+}
+
+export const Linkedin: React.FC<Props> = ({ width, height }) => {
     const darkTheme = useContext(ThemeContext)
 
     return (
         <svg 
             fill={darkTheme ? theme.colors.white : theme.colors.black} 
-            height="25px" 
-            width="25px" 
+            width={width ? width : '25px'} 
+            height={height ? height : '25px'} 
             version="1.1" 
             id="Layer_1" 
             xmlns="http://www.w3.org/2000/svg" 

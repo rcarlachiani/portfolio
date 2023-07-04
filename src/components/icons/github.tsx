@@ -2,11 +2,16 @@ import { useContext } from "react"
 import { ThemeContext } from "../../context/context"
 import { theme } from "../../theme/theme"
 
-export const Github = () => {
+interface Props {
+    width?: string | number,
+    height?: string | number,
+}
+
+export const Github: React.FC<Props> = ({ width, height }) => {
     const darkTheme = useContext(ThemeContext)
 
     return (
-        <svg width="25px" height="25px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg width={width ? width : '25px'} height={height ? height : '25px'} viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill={darkTheme ? theme.colors.white : theme.colors.black} >
                     <g id="icons" transform="translate(56.000000, 160.000000)">

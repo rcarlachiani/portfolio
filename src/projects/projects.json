@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "id": "gen1",
+      "title": "Dot Hotels",
+      "subtitle": "Development of components<br> & bugfixing",
+      "technologies": ["HTML5", "CSS3", "Bootstrap", "Javascript", "Handlebars"],
+      "image": "./images/dots.jpg"
+    },
+    {
+      "id": "gen2",
+      "title": "Lesa",
+      "subtitle": "Development & bugfixing",
+      "technologies": ["NextJs", "styled-components", "Recharts", "Mapbox"],
+      "image": "./images/lesa.jpg"
+    },
+    {
+      "id": "per1",
+      "title": "Shift register",
+      "subtitle": "Development",
+      "technologies": ["NextJs", "TailwindCSS", "Google Sheets"],
+      "image": "./images/dots.jpg"
+    },
+    {
+      "id": "per2",
+      "title": "IP Tracker",
+      "subtitle": "Development",
+      "technologies": ["ReactJs", "styled-components"],
+      "image": "./images/dots.jpg"
+    },
+    {
+      "id": "per3",
+      "title": "Drum store",
+      "subtitle": "Development",
+      "technologies": ["ReactJs", "Bootstrap", "Firebase"],
+      "image": "./images/dots.jpg"
+    },
+    {
+      "id": "per4",
+      "title": "Drummer portfolio",
+      "subtitle": "Development",
+      "technologies": ["HTML5", "CSS3", "Bootstrap"],
+      "image": "./images/dots.jpg"
+    }
+  ]
+}

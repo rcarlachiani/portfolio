@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './styles/App.css'
+import './styles/slick.css'
+import './styles/slick-theme.css'
 import NavbarComponent from './components/navbar/navbar'
 import { ContainerFlex, Section } from './styles/globalStyles'
 import { DeviceProvider, LanguageContext, ThemeContext } from './context/context'
@@ -10,6 +12,7 @@ import animationDataWhite from './assets/scroll-animation-white.json';
 import About from './components/about/about'
 import ParticlesBackground from './components/particlesBackground/particlesBackground'
 import Skills from './components/skills/skills'
+import Experience from './components/experience/experience'
 
 function App() {
   const [darkTheme, setDarkTheme] = useState<boolean>(false)
@@ -38,6 +41,9 @@ function App() {
               </Section>
               <Section>
                 <Skills />
+              </Section>
+              <Section>
+                <Experience />
               </Section>
               <ContainerFlex 
                 position='fixed' 

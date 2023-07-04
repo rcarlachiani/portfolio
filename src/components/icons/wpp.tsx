@@ -2,14 +2,19 @@ import { useContext } from "react"
 import { ThemeContext } from "../../context/context"
 import { theme } from "../../theme/theme"
 
-export const Wpp = () => {
+interface Props {
+    width?: string | number,
+    height?: string | number,
+}
+
+export const Wpp: React.FC<Props> = ({ width, height }) => {
     const darkTheme = useContext(ThemeContext)
 
     return (
         <svg 
             fill={darkTheme ? theme.colors.white : theme.colors.black} 
-            width="25px" 
-            height="25px" 
+            width={width ? width : '25px'} 
+            height={height ? height : '25px'} 
             viewBox="0 0 16 16" 
             xmlns="http://www.w3.org/2000/svg"
         >
