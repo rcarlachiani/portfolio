@@ -39,7 +39,7 @@ const Skills = () => {
     return (
         <ContainerGrid 
             height='inherit' 
-            width='inherit' 
+            //width='inherit' 
             templatecols='repeat(1, 1fr)'
             templaterows='1fr 3fr'
             justifyitems='center'

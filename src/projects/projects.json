@@ -2,45 +2,51 @@
   "projects": [
     {
       "id": "gen1",
-      "title": "Dot Hotels",
-      "subtitle": "Development of components<br> & bugfixing",
+      "title": "Dot Hotels website",
+      "subtitle": "Component development<br> & bugfixing",
       "technologies": ["HTML5", "CSS3", "Bootstrap", "Javascript", "Handlebars"],
-      "image": "./images/dots.jpg"
+      "image": "./images/dots.jpg",
+      "url": "https://dot-hotels.com/portal/es-es/p19/DOTHotels"
     },
     {
       "id": "gen2",
-      "title": "Lesa",
-      "subtitle": "Development & bugfixing",
+      "title": "Lesa Trials website",
+      "subtitle": "Component development<br> & bugfixing",
       "technologies": ["NextJs", "styled-components", "Recharts", "Mapbox"],
-      "image": "./images/lesa.jpg"
+      "image": "./images/lesa.jpg",
+      "url": "http://www.juiciosdelesahumanidad.ar/"
     },
     {
       "id": "per1",
-      "title": "Shift register",
-      "subtitle": "Development",
+      "title": "Shift register web",
+      "subtitle": "Full development",
       "technologies": ["NextJs", "TailwindCSS", "Google Sheets"],
-      "image": "./images/dots.jpg"
+      "image": "./images/shift-register.png",
+      "url": "https://turnera-con-registro-y-cuenta-regresiva-ek0wlmuiw-rcarlachiani.vercel.app/"
     },
     {
       "id": "per2",
-      "title": "IP Tracker",
-      "subtitle": "Development",
+      "title": "IP Adress Tracker",
+      "subtitle": "Full development",
       "technologies": ["ReactJs", "styled-components"],
-      "image": "./images/dots.jpg"
+      "image": "./images/ip-tracker.png",
+      "url": "https://ip-address-tracker-challenge-ojbnf75gh-rcarlachiani.vercel.app/"
     },
     {
       "id": "per3",
-      "title": "Drum store",
-      "subtitle": "Development",
+      "title": "Online drum store",
+      "subtitle": "Full development",
       "technologies": ["ReactJs", "Bootstrap", "Firebase"],
-      "image": "./images/dots.jpg"
+      "image": "./images/drum-store.png",
+      "url": "https://proyecto-final-react-js.vercel.app/"
     },
     {
       "id": "per4",
       "title": "Drummer portfolio",
-      "subtitle": "Development",
+      "subtitle": "Full development",
       "technologies": ["HTML5", "CSS3", "Bootstrap"],
-      "image": "./images/dots.jpg"
+      "image": "./images/drummer-portfolio.png",
+      "url": "https://rcarlachiani.github.io/drums-on-demand-web/"
     }
   ]
 }

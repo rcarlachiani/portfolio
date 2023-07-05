@@ -20,9 +20,12 @@ interface PropsContainerFlex {
     width?: string,
     height?: string,
     maxwidth?: string,
+    maxwidthtablet?: string,
+    maxwidthmobile?: string,
     maxheight?: string,
     margin?: string,
     padding?: string,
+    margintablet?: string,
     marginmobile?: string,
     paddingmobile?: string,
     border?: string,
@@ -128,6 +131,8 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
     @media (max-width: 992px) {
         flex-direction: ${(props) => props.flexdirectiontablet};
+        max-width: ${(props) => props.maxwidthtablet};
+        margin: ${(props) => props.margintablet};
     }
 
     @media (max-width: 576px) {
@@ -137,6 +142,7 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
         padding: ${(props) => props.paddingmobile};
         justify-self: ${(props) => props.justifyselfmobile};
         align-self: ${(props) => props.alignselfmobile};
+        max-width: ${(props) => props.maxwidthmobile};
     }
 `
 

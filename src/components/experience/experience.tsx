@@ -1,11 +1,12 @@
 import { useContext } from "react"
-import { ContainerFlex, ContainerGrid, Title } from "../../styles/globalStyles"
+import { ContainerGrid, Title } from "../../styles/globalStyles"
 import { theme } from "../../theme/theme"
 import { LanguageContext, ThemeContext } from "../../context/context"
 import { TitlesEN, TitlesES } from "../../translation/translation"
 import Slider from "react-slick"
 import Project from "./project"
 import data from '../../projects/projects.json'
+import { SliderWrapper } from "./projectStyles"
 
 const Experience = () => {
     const language = useContext(LanguageContext);
@@ -13,11 +14,12 @@ const Experience = () => {
     const settings = {
         dots: false,
         infinite: true,
-        autoplay: true,
+        autoplay: false,
+        autoplaySpeed: 4000,
         pauseOnHover: true,
-        speed: 500,
+        speed: 3000,
         slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToScroll: 3,
       };
 
     return (
@@ -39,13 +41,7 @@ const Experience = () => {
                 padding='0px 0px 40px 0px'
                 dangerouslySetInnerHTML={{__html: language === 'en' ? TitlesEN.projects : TitlesES.projects }}
             />
-            <ContainerFlex 
-                maxwidth='1102px' 
-                height='450px' 
-                justifycontent='center' 
-                alignself='baseline'
-                //margin='25px 0px 0px 0px'
-            >
+            <SliderWrapper>
                 <Slider {...settings}>
                     {data.projects.map((project) => (
                         <div key={project.id}>
@@ -53,7 +49,7 @@ const Experience = () => {
                         </div>
                     ))}
                 </Slider>
-            </ContainerFlex>
+            </SliderWrapper>
         </ContainerGrid>
     )
 }
