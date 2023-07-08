@@ -23,7 +23,7 @@ const NavbarComponent = ({ setDarkTheme, setLanguage }: Props) => {
     return (
         <>
             <Navbar 
-                width='100%' 
+                width='75%' 
                 height='50px' 
                 justifycontent='space-between'
                 padding='inherit'

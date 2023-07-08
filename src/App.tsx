@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './styles/App.css'
-import './styles/slick.css'
-import './styles/slick-theme.css'
+import 'swiper/css';
+import 'swiper/css/bundle';
 import NavbarComponent from './components/navbar/navbar'
 import { ContainerFlex, Section } from './styles/globalStyles'
 import { DeviceProvider, LanguageContext, ThemeContext } from './context/context'
@@ -9,14 +9,27 @@ import { theme } from './theme/theme'
 import Lottie from "lottie-react";
 import animationData from './assets/scroll-animation.json';
 import animationDataWhite from './assets/scroll-animation-white.json';
-import About from './components/about/about'
+import MainPage from './pages/mainPage/mainPage'
 import ParticlesBackground from './components/particlesBackground/particlesBackground'
-import Skills from './components/skills/skills'
-import Experience from './components/experience/experience'
+import Skills from './pages/skills/skills'
+import Experience from './pages/experience/experience'
+import About from './pages/about/about';
 
 function App() {
-  const [darkTheme, setDarkTheme] = useState<boolean>(false)
-  const [language, setLanguage] = useState<string>('en')
+  const [darkTheme, setDarkTheme] = useState<boolean>(
+    localStorage.getItem('darkTheme') === 'true'
+  );
+  const [language, setLanguage] = useState<string>(
+    localStorage.getItem('language') || 'en'
+  );
+
+  useEffect(() => {
+    localStorage.setItem('darkTheme', JSON.stringify(darkTheme));
+  }, [darkTheme]);
+
+  useEffect(() => {
+    localStorage.setItem('language', language);
+  }, [language]);
 
   return (
     <>
@@ -33,9 +46,12 @@ function App() {
               height='100vh'
               className='container'
               padding='0px 35px' 
-              backgroundcolor={darkTheme ? theme.colors.black : theme.colors.white} 
+              backgroundcolor={darkTheme ? theme.colors.black : theme.colors.whiteBackground} 
             >
               <NavbarComponent setDarkTheme={setDarkTheme} setLanguage={setLanguage}/>
+              <Section>
+                <MainPage />
+              </Section>
               <Section>
                 <About />
               </Section>
@@ -51,8 +67,12 @@ function App() {
                 padding='10px 0px'
                 height='80px' 
                 justifycontent='center'
+                zindex={1}
               >
-                <Lottie animationData={darkTheme ? animationDataWhite : animationData} loop={true}/>
+                <Lottie 
+                  animationData={darkTheme ? animationDataWhite : animationData} 
+                  loop={true}
+                />
               </ContainerFlex>
             </ContainerFlex>
             <ParticlesBackground />

@@ -2,10 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  --swiper-navigation-size: 0px;
 }
 
 .html, body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Mulish', sans-serif;
   scrollbar-width: none;
   ::-webkit-scrollbar {
     display: none;
@@ -13,5 +14,12 @@
 }
 
 span {
-  color: #fb7756;
+  background-image: linear-gradient(310deg,#7928ca,#ff0080); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ff0080 !important;
 }

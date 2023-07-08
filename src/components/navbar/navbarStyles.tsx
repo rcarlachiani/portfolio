@@ -38,6 +38,7 @@ interface PropsA {
 export const Navbar = styled.div<PropsNavbar>`
     display: flex;
     position: absolute;
+    top: 20px;
     z-index: 3;
     flex-direction: ${(props) => props.flexdirection};
     justify-content: ${(props) => props.justifycontent};
@@ -49,7 +50,10 @@ export const Navbar = styled.div<PropsNavbar>`
     margin: ${(props) => props.margin};
     padding: ${(props) => props.padding};
     border: ${(props) => props.border};
-    background-color: ${(props) => props.backgroundcolor};
+    background-color: hsla(0,5% , 80%, 0.2);
+    backdrop-filter: blur(4px);
+    border-radius: 40px;
+    box-shadow: 0px 4px 4px hsla(0deg, 0%, 0%, 0.1);
 `
 export const NavbarItem = styled.div<PropsNavbarItem>`
     display: flex;

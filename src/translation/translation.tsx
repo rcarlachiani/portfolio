@@ -1,29 +1,35 @@
 export const TitlesEN = {
-    greeting: 'Hi!',
-    skills: 'These are the<br> technolgies I <span>work</span> with',
-    projects: 'Here, some <span>projects</span> I worked on',
+    greeting: "Hello!",
+    about: "About <span>me</span>",
+    skills: "<br>Technolgies I <span>work</span> with",
+    projects: "<span>Projects</span> I've built",
 }
 
 export const SubtitlesEN = {
     whoIAm: "I'm Rodrigo",
-    role: "Frontend Web Developer",
+    role: "{ Frontend Developer }",
 }
 
 export const TextEN = {
-    
+    technologies: "Technologies used:",
+    goToSite: "Go to site",
+    aboutMe: "In the early stages of my career as a developer, I worked at a creative agency called <span><b>Genosha</b></span>, in where I had the opportunity to collaborate on projects that presented significant technical and creative challenges. I contributed to the creation of components and websites for digital products and experiences alongside teams in planning, design, backend, and QA. We utilized agile methodologies to drive the process forward.<br><br>Currently, I am employed at the <span><b>Ministry of Finance of the Province of Buenos Aires</b></span>, working on the development of an internal web system using React.js and Django Rest. This system aims to enhance and streamline the financial, budgetary, and administrative management of municipalities in the Province of Buenos Aires."
 }
 
 export const TitlesES = {
-    greeting: '¡Hola!',
-    skills: 'Éstas son las<br> tecnologías con las que <span>trabajo</span>',
-    projects: 'Aquí, algunos <span>proyectos</span> en los que trabajé'
+    greeting: "¡Hola!",
+    about: "Acerca de <span>mí</span>",
+    skills: "<br>Tecnologías con las que <span>trabajo</span>",
+    projects: "<span>Proyectos</span> que desarrollé"
 }
 
 export const SubtitlesES = {
     whoIAm: "Soy Rodrigo",
-    role: "Desarrollador Web Frontend",
+    role: "{ Desarrollador Frontend }",
 }
 
 export const TextES = {
-    
+    technologies: "Tecnologías usadas:",
+    goToSite: "Ir al sitio",
+    aboutMe: "En los comienzos de mi carrera, trabajé en una agencia creativa llamada <span><b>Genosha</b></span>, en donde he tenido la oportunidad de colaborar en proyectos que me han demandado grandes desafíos creativos.<br><br>Actualmente, trabajo para el <span><b>Ministerio de Hacienda y Finanzas de la Provincia de Buenos Aires</b></span> en el desarrollo de un sistema web interno utilizando React.Js y Django Rest, el cual tiene como objetivo oprtimizar la gestión de los municipios de la provincia de Buenos Aires."
 }
