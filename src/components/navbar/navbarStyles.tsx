@@ -50,8 +50,8 @@ export const Navbar = styled.div<PropsNavbar>`
     margin: ${(props) => props.margin};
     padding: ${(props) => props.padding};
     border: ${(props) => props.border};
-    background-color: hsla(0,5% , 80%, 0.2);
-    backdrop-filter: blur(4px);
+    background-color: hsla(242.2, 49.4%, 67.45%, 0.1);
+    backdrop-filter: blur(6px);
     border-radius: 40px;
     box-shadow: 0px 4px 4px hsla(0deg, 0%, 0%, 0.1);
 `

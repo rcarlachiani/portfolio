@@ -1,7 +1,7 @@
 import { ContainerFlex, Text, Title } from "../../styles/globalStyles"
 import { CardWrapper, ProjectImage, ProjectLink } from "./projectStyles"
 import { useContext } from "react";
-import { LanguageContext, ThemeContext } from "../../context/context";
+import { LanguageContext } from "../../context/context";
 import { theme } from "../../theme/theme";
 import { IconsProjects } from "../../components/icons/icons";
 import Button from "../../components/button/button";
@@ -21,51 +21,61 @@ interface Props {
 
 const Project = ({projectData}: Props ) => {
     const language = useContext(LanguageContext);
-    const darkTheme = useContext(ThemeContext);
 
     return (
         <CardWrapper>
             <ContainerFlex
                 flexdirection='column'
-                justifycontent='center'
+                justifycontent='start'
                 alignitems='center'
-                width='320px'
-                height='450px'
-                padding='15px'
-                borderradius='15px'
-                backgroundcolor='hsla(0,5% , 80%, 0.2)'
-                backgroundblur='blur(4px)'
+                width='180px'
+                widthsm='280px'
+                widthmd='240px'
+                widthxl='260px'
+                widthxxl='300px'
+                height='280px'
+                heightsm='400px'
+                heightmd='340px'
+                heightxl='380px'
+                heightxxl='420px'
+                borderradius='10px'
+                backgroundcolor='hsla(242.2, 49.4%, 67.45%, 0.1)'
+                backgroundblur='blur(6px)'
+                overflowy='hidden'
                 boxshadow={theme.shadows.boxShadow}
             >
                 <ProjectImage src={projectData.image} alt='project image'/>   
                 <ContainerFlex 
                     flexdirection='column'
-                    alignitems='center'
-                    margin='10px 0px 0px 0px'
-                    gap='15px'
+                    alignitems='start'
+                    justifycontent='space-between'
+                    padding='10px 15px 15px 15px'
+                    paddingsm='10px 20px 20px 20px'
+                    width='inherit'
+                    height='inherit'
                 >
                     <Title 
-                        fontsize='16px'
-                        fontsizesm='18px'
+                        fontSize='18px'
+                        fontsizesm='24px'
                         fontsizemd='20px'
                         fontsizelg='22px'
-                        fontsizexl='24px'
-                        textalign='center'
-                        textalignlg='start'
-                        color={darkTheme ? theme.colors.white : theme.colors.black}
+                        textalign='start'
+                        color={theme.colors.purpleWhite}
                         filter={theme.shadows.mainShadow}
                         dangerouslySetInnerHTML={{__html: language === 'en' ? projectData.titleEN : projectData.titleES}} 
                     />
                     <ContainerFlex 
                         flexdirection='column'
                         width='100%'
-                        alignitems='center'
+                        alignitems='start'
                     >
                         <ContainerFlex
-                            padding='5px 4px 5px 4px'
+                            padding='6px 2px 6px 2px'
+                            paddingmd='4px 2px 4px 2px'
+                            paddingxl='6px 2px 6px 2px'
                             borderradius='15px'
-                            backgroundcolor='hsla(0,5% , 80%, 0.2);'
-                            backgroundblur='blur(4px)'
+                            backgroundcolor='hsla(242.2, 49.4%, 67.45%, 0.1)'
+                            backgroundblur='blur(6px)'
                         >
                             {
                                 IconsProjects().map((icon) => (
@@ -74,8 +84,10 @@ const Project = ({projectData}: Props ) => {
                                         <ContainerFlex 
                                             key={icon.key}
                                             alignitems='center'
-                                            width='16px' 
-                                            height='25px' 
+                                            width='12px' 
+                                            height='14px'
+                                            widthsm='16px' 
+                                            heightsm='20px'  
                                             margin='0px 8px'
                                         >
                                             {icon}
@@ -86,13 +98,12 @@ const Project = ({projectData}: Props ) => {
                         </ContainerFlex>
                     </ContainerFlex>
                     <Text 
-                        fontsize='12px'
-                        fontsizesm='14px'
-                        fontsizexl='16px'
-                        textalign='center'
+                        fontSize='10px'
+                        fontsizesm='12px'
+                        textalign='start'
                         maxwidth='280px'
                         filter={theme.shadows.mainShadow}
-                        color={darkTheme ? theme.colors.white : theme.colors.black}
+                        color={theme.colors.purpleWhite}
                         dangerouslySetInnerHTML={{__html: language === 'en' ? projectData.subtitleEN : projectData.subtitleES}}    
                     />
                     <ContainerFlex>

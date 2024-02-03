@@ -1,30 +1,9 @@
 import { styled } from "styled-components";
 import { theme } from "../../theme/theme";
 
-interface PropsCardWrapper {
-    backgroundcolor?: string,
-}
-
 export const ProjectImage = styled.img`
     display: block;
-    width: 180px;
-    border-radius: 8px;
-
-    @media (${theme.breakpoints.sm}) {
-        width: 220px;
-    } 
-    
-    @media (${theme.breakpoints.md}) {
-        width: 280px;
-    } 
-    
-    @media (${theme.breakpoints.lg}) {
-        
-    } 
-
-    @media (${theme.breakpoints.xl}) {
-       
-    }  
+    width: inherit;
 `
 
 export const ProjectLink = styled.a`
@@ -32,7 +11,7 @@ export const ProjectLink = styled.a`
     color: ${theme.colors.black};
 `
 
-export const CardWrapper = styled.div<PropsCardWrapper>`
+export const CardWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +20,22 @@ export const CardWrapper = styled.div<PropsCardWrapper>`
 
 export const SliderWrapper = styled.div`
     display: flex;
-    width: 70%;
-    height: 65vh;
+    max-width: 320px;
+    height: 60vh;
+
+    @media (${theme.breakpoints.sm}) {
+        max-width: 600px;
+    } 
+ 
+    @media (${theme.breakpoints.lg}) {
+        max-width: 650px;
+    }
+
+    @media (${theme.breakpoints.xl}) {
+        max-width: 80%;
+    }  
+
+    @media (${theme.breakpoints.xxl}) {
+        max-width: 70%;
+    }  
 `

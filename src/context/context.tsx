@@ -2,10 +2,12 @@ import React, { createContext, useEffect, useState } from 'react';
 
 export type DeviceContextType = {
   isMobile: boolean;
+  isTablet: boolean;
 };
 
 export const DeviceContext = createContext<DeviceContextType>({
   isMobile: false,
+  isTablet: false,
 });
 
 type DeviceProviderProps = {
@@ -14,10 +16,14 @@ type DeviceProviderProps = {
 
 export const DeviceProvider: React.FC<DeviceProviderProps> = ({ children }) => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isTablet, setIsTablet] = useState<boolean>(false);
 
   const handleResize = () => {
-    const isMobileDevice = window.innerWidth <= 576;
+    const isMobileDevice = window.innerWidth <= 768;
+    const isTabletDevice = window.innerWidth <= 1200;
+    
     setIsMobile(isMobileDevice);
+    setIsTablet(isTabletDevice)
   };
 
   useEffect(() => {
@@ -30,11 +36,10 @@ export const DeviceProvider: React.FC<DeviceProviderProps> = ({ children }) => {
   }, []);
 
   return (
-    <DeviceContext.Provider value={{ isMobile }}>
+    <DeviceContext.Provider value={{ isMobile, isTablet }}>
       {children}
     </DeviceContext.Provider>
   );
 };
 
-export const ThemeContext = createContext(false);
 export const LanguageContext = createContext('en');

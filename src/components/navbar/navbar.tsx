@@ -1,23 +1,19 @@
 import { SetStateAction, useContext } from "react"
 import { ContainerFlex } from "../../styles/globalStyles"
 import { Navbar, NavbarItem, NavbarLink } from "../navbar/navbarStyles"
-import { DeviceContext, ThemeContext } from "../../context/context"
+import { DeviceContext } from "../../context/context"
 import { Linkedin } from "../icons/linkedin"
 import { Github } from "../icons/github"
 import { Gmail } from "../icons/gmail"
 import { Wpp } from "../icons/wpp"
-import { Dark } from "../icons/dark"
-import { Light } from "../icons/light"
 import { theme } from "../../theme/theme"
 import Burguer from "./burguer"
 
 interface Props {
-    setDarkTheme: React.Dispatch<SetStateAction<boolean>>,
     setLanguage: React.Dispatch<SetStateAction<string>>,
 }
 
-const NavbarComponent = ({ setDarkTheme, setLanguage }: Props) => {
-    const darkTheme = useContext(ThemeContext);
+const NavbarComponent = ({ setLanguage }: Props) => {
     const { isMobile } = useContext(DeviceContext);
 
     return (
@@ -30,16 +26,9 @@ const NavbarComponent = ({ setDarkTheme, setLanguage }: Props) => {
             >
                 <ContainerFlex>
                     <NavbarItem 
-                        alignitems='center'
-                        margin='0px 10px 0px 0px' 
-                        onClick={() => setDarkTheme(!darkTheme)}
-                    >
-                        {darkTheme ? (<Light />) : (<Dark />)}
-                    </NavbarItem>
-                    <NavbarItem 
                         alignitems='center' 
-                        margin='0px 10px'
-                        color={darkTheme ? theme.colors.white : theme.colors.black} 
+                        margin='0px 10px 0px 0px'
+                        color={theme.colors.purpleWhite} 
                         onClick={() => setLanguage('en')}
                     >
                         EN
@@ -47,7 +36,7 @@ const NavbarComponent = ({ setDarkTheme, setLanguage }: Props) => {
                     <NavbarItem 
                         alignitems='center' 
                         margin='0px 10px'
-                        color={darkTheme ? theme.colors.white : theme.colors.black} 
+                        color={theme.colors.purpleWhite} 
                         onClick={() => setLanguage('es')}
                     >
                         ES

@@ -1,9 +1,6 @@
-import { useContext } from "react"
 import { theme } from "../../theme/theme"
-import { ThemeContext } from "../../context/context"
 
 export const BurguerIcon = () => {
-    const darkTheme = useContext(ThemeContext)
 
     return(
         <svg 
@@ -13,9 +10,9 @@ export const BurguerIcon = () => {
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
         >
-            <path d="M4 18L20 18" stroke={darkTheme ? theme.colors.white : theme.colors.black} strokeWidth="2" strokeLinecap="round"/>
-            <path d="M4 12L20 12" stroke={darkTheme ? theme.colors.white : theme.colors.black} strokeWidth="2" strokeLinecap="round"/>
-            <path d="M4 6L20 6" stroke={darkTheme ? theme.colors.white : theme.colors.black} strokeWidth="2" strokeLinecap="round"/>
+            <path d="M4 18L20 18" stroke={theme.colors.purpleWhite} strokeWidth="2" strokeLinecap="round"/>
+            <path d="M4 12L20 12" stroke={theme.colors.purpleWhite} strokeWidth="2" strokeLinecap="round"/>
+            <path d="M4 6L20 6" stroke={theme.colors.purpleWhite} strokeWidth="2" strokeLinecap="round"/>
         </svg>
     )
 }

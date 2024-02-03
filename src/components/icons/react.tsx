@@ -1,6 +1,4 @@
-import { useContext } from "react"
 import { theme } from "../../theme/theme"
-import { ThemeContext } from "../../context/context"
 
 interface Props {
     width?: string | number,
@@ -8,7 +6,6 @@ interface Props {
 }
 
 export const ReactIcon: React.FC<Props> = ({ width, height }) => {
-    const darkTheme = useContext(ThemeContext)
 
     return(
         <svg 
@@ -16,7 +13,7 @@ export const ReactIcon: React.FC<Props> = ({ width, height }) => {
             height={height ? height : '9vh'}
             viewBox="0 0 24 24" 
             xmlns="http://www.w3.org/2000/svg"
-            fill={darkTheme ? theme.colors.white : theme.colors.black}
+            fill={theme.colors.purpleWhite}
         >
             <g>
                 <path fill="none" d="M0 0h24v24H0z"/>

@@ -3,7 +3,6 @@ import type { Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import { theme } from "../../theme/theme";
-import { ParticlesBlur } from "./particlesStyles";
 
 const ParticlesBackground = () => {
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -27,36 +26,36 @@ const ParticlesBackground = () => {
                     },
                     modes: {
                         push: {
-                            quantity: 2,
+                            quantity: 5,
                         },
                         repulse: {
-                            distance: 80,
+                            distance: 100,
                             duration: 0.5,
                         },
                     },
                 },
                 particles: {
                     color: {
-                        value: theme.colors.rose,
+                        value: theme.colors.purpleParticles,
                     },
-                    links: {
-                        color: theme.colors.aquagreen,
-                        distance: 180,
-                        enable: true,
-                        opacity: 0.4,
-                        width: 1.5,
-                    },
+                    // links: {
+                    //     color: theme.colors.purpleParticles,
+                    //     distance: 180,
+                    //     enable: true,
+                    //     opacity: 0.4,
+                    //     width: 1.5,
+                    // },
                     collisions: {
-                        enable: false,
+                        enable: true,
                     },
                     move: {
-                        direction: "none",
+                        
                         enable: true,
                         outModes: {
                             default: "bounce",
                         },
-                        random: false,
-                        speed: 0.4,
+                        random: true,
+                        speed: 0.6,
                         straight: false,
                     },
                     number: {
@@ -67,19 +66,18 @@ const ParticlesBackground = () => {
                         value: 80,
                     },
                     opacity: {
-                        value: 0.3,
+                        value: 0.6,
                     },
                     shape: {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 0.8, max: 3 },
+                        value: { min: 0.5, max: 3 },
                     },
                 },
                 detectRetina: true,
             }}
             />
-            <ParticlesBlur />
         </>
     )
 }

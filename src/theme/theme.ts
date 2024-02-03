@@ -1,15 +1,11 @@
 import { DefaultTheme } from "styled-components"
 
 const colors = {
-    white: '#FFFFFF',
-    whiteBackground: "#fbfbf9",
-    black: '#242522',
-    tomato: '#e74645',
-    orange: '#fb7756',
-    darkyellow: '#facd60',
-    lightyellow: '#fdfa66',
-    aquagreen: '#1ac0c6',
+    purpleWhite: '#f8f8ff',
+    purpleBlack: '#1b0f23',
     purple: '#7928ca',
+    purpleBackground: '#1b0f23',
+    purpleParticles: '#9450d4',
     rose: '#ff0080'
 }
 
@@ -20,9 +16,10 @@ const shadows = {
 
 const breakpoints = {
     sm: 'min-width: 478px',
-    md: 'min-width: 768px',
+    md: 'min-width: 769px',
     lg: 'min-width: 992px',
     xl: 'min-width: 1200px',
+    xxl: 'min-width: 1600px',
 }
 
 const theme: DefaultTheme = {

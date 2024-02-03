@@ -37,11 +37,17 @@ interface PropsContainerFlex {
     alignselflg?: string,
     alignselfxl?: string,
     width?: string,
+    widthsm?: string,
+    widthmd?: string,
+    widthlg?: string,
+    widthxl?: string,
+    widthxxl?: string,
     height?: string,
     heightsm?: string,
     heightmd?: string,
     heightlg?: string,
     heightxl?: string,
+    heightxxl?: string,
     maxwidth?: string,
     maxwidthsm?: string,
     maxwidthmd?: string,
@@ -90,6 +96,16 @@ interface PropsContainerGrid {
     gapmd?: string,
     gaplg?: string,
     gapxl?: string,
+    columngap?: string,
+    columngapsm?: string,
+    columngapmd?: string,
+    columngaplg?: string,
+    columngapxl?: string,
+    rowgap?: string,
+    rowgapsm?: string,
+    rowgapmd?: string,
+    rowgaplg?: string,
+    rowgapxl?: string,
     position?: string,
     top?: string,
     bottom?: string,
@@ -129,7 +145,7 @@ interface PropsText {
     display?: string,
     gridcolumn?: string,
     gridrow?: string,
-    fontsize?: string,
+    fontSize?: string,
     fontsizesm?: string,
     fontsizemd?: string,
     fontsizelg?: string,
@@ -161,8 +177,8 @@ interface PropsText {
     whitespace?: string,
     textoverflow?: string,
     background?: string,
-    backgroundclip?: boolean,
-    fillcolor?: boolean,
+    backgroundclip?: string,
+    fillcolor?: string,
     maxwidth?: string,
     maxwidthsm?: string,
     maxwidthmd?: string,
@@ -212,6 +228,7 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
         max-width: ${(props) => props.maxwidthsm};
         gap: ${(props) => props.gapsm};
         margin: ${(props) => props.marginsm};
+        width: ${(props) => props.widthsm};
         height: ${(props) => props.heightsm};
         padding: ${(props) => props.paddingsm};
     }
@@ -224,6 +241,7 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
         padding: ${(props) => props.paddingmd};
         justify-self: ${(props) => props.justifyselfmd};
         align-self: ${(props) => props.alignselfmd};
+        width: ${(props) => props.widthmd};
         height: ${(props) => props.heightmd};
         max-width: ${(props) => props.maxwidthmd};
     }
@@ -237,6 +255,7 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
         justify-self: ${(props) => props.justifyselflg};
         align-self: ${(props) => props.alignselflg};
         max-width: ${(props) => props.maxwidthlg};
+        width: ${(props) => props.widthlg};
         height: ${(props) => props.heightlg};
     }
 
@@ -244,8 +263,15 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
         margin: ${(props) => props.marginxl};
         padding: ${(props) => props.paddingxl};
         gap: ${(props) => props.gapxl};
+        width: ${(props) => props.widthxl};
         height: ${(props) => props.heightxl};
         max-width: ${(props) => props.maxwidthxl};
+    }
+
+
+    @media (${theme.breakpoints.xxl}) {
+        width: ${(props) => props.widthxxl};
+        height: ${(props) => props.heightxxl};
     }
 `
 
@@ -254,6 +280,8 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
     grid-template-columns: ${(props) => props.templatecols};
     grid-template-rows: ${(props) => props.templaterows};
     gap: ${(props) => props.gap};
+    column-gap: ${(props) => props.columngap};
+    row-gap: ${(props) => props.rowgap};
     position: ${(props) => props.position};
     top: ${(props) => props.top};
     bottom: ${(props) => props.bottom};
@@ -283,6 +311,8 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
         grid-template-columns: ${(props) => props.templatecolssm};
         grid-template-rows: ${(props) => props.templaterowssm};
         gap: ${(props) => props.gapsm};
+        column-gap: ${(props) => props.columngapsm};
+        row-gap: ${(props) => props.rowgapsm};
         padding: ${(props) => props.paddingsm};
     }
 
@@ -290,6 +320,8 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
         grid-template-columns: ${(props) => props.templatecolsmd};
         grid-template-rows: ${(props) => props.templaterowsmd};
         gap: ${(props) => props.gapmd};
+        column-gap: ${(props) => props.columngapmd};
+        row-gap: ${(props) => props.rowgapmd};
         padding: ${(props) => props.paddingmd};
     }
 
@@ -297,6 +329,8 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
         grid-template-columns: ${(props) => props.templatecolslg};
         grid-template-rows: ${(props) => props.templaterowslg};
         gap: ${(props) => props.gaplg};
+        column-gap: ${(props) => props.columngaplg};
+        row-gap: ${(props) => props.rowgaplg};
         margin: ${(props) => props.marginlg};
         padding: ${(props) => props.paddinglg};
     }
@@ -305,6 +339,8 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
         grid-template-columns: ${(props) => props.templatecolsxl};
         grid-template-rows: ${(props) => props.templaterowsxl};
         gap: ${(props) => props.gapxl};
+        column-gap: ${(props) => props.columngapxl};
+        row-gap: ${(props) => props.rowgapxl};
         margin: ${(props) => props.marginxl};
         padding: ${(props) => props.paddingxl};
     }
@@ -321,7 +357,7 @@ export const Section = styled.section<PropsSection>`
 `
 
 export const Text = styled.p<PropsText>`
-    font-size: ${(props) => props.fontsize};
+    font-size: ${(props) => props.fontSize};
     line-height: ${(props) => props.lineheight};
     color: ${(props) => props.color ? props.color : theme.colors.black};
     filter: ${(props) => props.filter};
@@ -376,7 +412,7 @@ export const Title = styled.h1<PropsText>`
     filter: ${(props) => props.filter};
     grid-column: ${(props) => props.gridcolumn};
     grid-row: ${(props) => props.gridrow};
-    font-size: ${(props) => props.fontsize};
+    font-size: ${(props) => props.fontSize};
     line-height: ${(props) => props.lineheight};
     color: ${(props) => props.color};
     text-align: ${(props) => props.textalign};
@@ -412,7 +448,7 @@ export const Title = styled.h1<PropsText>`
 `
 
 export const Subtitle = styled.h2<PropsText>`
-    font-size: ${(props) => props.fontsize};
+    font-size: ${(props) => props.fontSize};
     line-height: ${(props) => props.lineheight};
     color: ${(props) => props.color};
     filter: ${(props) => props.filter};
@@ -429,4 +465,18 @@ export const Subtitle = styled.h2<PropsText>`
         text-align: ${(props) => props.textalignlg};
         margin: ${(props) => props.marginlg};
     }
+`
+
+export const GradientBackground = styled.div`
+    width: 100%;
+    height: 300px;
+    left: 0;
+    right: 0;
+    bottom: -300px;
+    margin: 0 auto;
+    position: absolute;
+    background: radial-gradient(circle, rgba(255,0,128,1) 0%, rgba(121,40,202,1) 100%);
+    border-radius: 100%;
+    opacity: 0.7;
+    filter: blur(150px);
 `

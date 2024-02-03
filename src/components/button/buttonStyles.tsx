@@ -5,7 +5,15 @@ interface PropsButton {
     justifycontent?: string,
     alignitems?: string,
     width?: string,
+    widthsm?: string,
+    widthmd?: string,
+    widthlg?: string,
+    widthxl?: string,
     height?: string,
+    heightsm?: string,
+    heightmd?: string,
+    heightlg?: string,
+    heightxl?: string,
     maxwidth?: string,
     maxheight?: string,
     margin?: string,
@@ -29,4 +37,24 @@ export const ButtonGradient = styled.button<PropsButton>`
     border-radius: 40px;
     filter: ${theme.shadows.mainShadow};
     cursor: pointer;
+
+    @media (${theme.breakpoints.sm}) {
+        width: ${(props) => props.widthsm};
+        height: ${(props) => props.heightsm};
+    }
+
+    @media (${theme.breakpoints.md}) {
+        width: ${(props) => props.widthmd};
+        height: ${(props) => props.heightmd};
+    }
+
+    @media (${theme.breakpoints.lg}) {
+        width: ${(props) => props.widthlg};
+        height: ${(props) => props.heightlg};
+    }
+
+    @media (${theme.breakpoints.xl}) {
+        width: ${(props) => props.widthxl};
+        height: ${(props) => props.heightxl};
+    }
 `

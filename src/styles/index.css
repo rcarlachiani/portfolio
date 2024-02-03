@@ -20,6 +20,23 @@ span {
   -webkit-text-fill-color: transparent;
 }
 
+.swiper {
+  overflow-y: visible;
+}
+
+.swiper-pagination {
+  bottom: -20px !important;
+  padding: 6px;
+  background-color: hsla(242.2, 49.4%, 67.45%, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px hsla(0deg, 0%, 0%, 0.1);
+}
+
+.swiper-pagination-bullet {
+  background-color: #b06e80 !important;
+}
+
 .swiper-pagination-bullet-active {
   background-color: #ff0080 !important;
 }

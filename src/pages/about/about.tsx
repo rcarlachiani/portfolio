@@ -1,13 +1,12 @@
 import { useContext } from "react"
 import { ContainerFlex, Text, Title } from "../../styles/globalStyles"
 import { theme } from "../../theme/theme"
-import { DeviceContext, LanguageContext, ThemeContext } from "../../context/context"
+import { DeviceContext, LanguageContext } from "../../context/context"
 import { TextEN, TextES, TitlesEN, TitlesES } from "../../translation/translation"
 import { AboutImage } from "./aboutStyles"
 
 const About = () => {
     const language = useContext(LanguageContext);
-    const darkTheme = useContext(ThemeContext);
     const { isMobile } = useContext(DeviceContext);
 
     return (
@@ -20,13 +19,13 @@ const About = () => {
             justifycontent='center'
             flexdirection='column'
             alignitems='center'
-            gap='25px'
-            gapmd='50px'
+            gap='15px'
+            gapmd='0px'
             filter={theme.shadows.mainShadow}
         >
             <Title
-                color={darkTheme ? theme.colors.white : theme.colors.black} 
-                fontsize='25px'
+                color={theme.colors.purpleWhite} 
+                fontSize='25px'
                 fontsizesm='35px'
                 fontsizemd='46px'
                 fontsizelg='52px'
@@ -40,34 +39,30 @@ const About = () => {
             />
                 <ContainerFlex 
                     height='65vh'
-                    heightmd='50vh'
                     flexdirection='column'
-                    flexdirectionmd='row'
+                    flexdirectionlg='row'
                     alignitems='center'
-                    alignitemsmd='start'
-                    gap='28px'
-                    gapmd='50px'
+                    justifycontent='space-evenly'
+                    gap='20px'
+                    gaplg='50px'
                 >
-                    <AboutImage src='/images/profile-picture-perspective.png' />
+                    <AboutImage src='/images/profile-picture-perspective-II.png' />
                     <ContainerFlex
                         overflowy='scroll'
-                        maxwidth='56vw'
-                        maxwidthmd='50vw'
+                        maxwidth='60vw'
+                        maxwidthsm='50vw'
                         maxwidthxl='40vw'
-                        margin='0px'
-                        marginmd='25px 0px 0px 0px'
-                        marginxl='50px 0px 0px 0px'
                     >
                         <Text
-                            color={darkTheme ? theme.colors.white : theme.colors.black}  
-                            fontsize='14px'
+                            color={theme.colors.purpleWhite}  
+                            fontSize='11px'
+                            fontsizesm='14px'
                             fontsizemd='16px'
-                            fontsizelg='17px'
-                            fontsizexl='1.2vw'
-                            lineheight='14px'
-                            lineheightsm='16px'
-                            lineheightmd='15px'
-                            lineheightlg='unset'
+                            fontsizexl='1.1vw'
+                            lineheight='16px'
+                            lineheightmd='20px'
+                            lineheightlg='18px'
+                            lineheightxl='unset'
                             textalign='start'
                             dangerouslySetInnerHTML={{__html: language === 'en' ? TextEN.aboutMe : TextES.aboutMe }}
                         />

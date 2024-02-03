@@ -35,17 +35,17 @@ export const IconsProjects = () => {
 export const IconsSkills = () => {
     const { isMobile } = useContext(DeviceContext);
     return [
-        <HtmlIcon key={'HTML5'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>, 
-        <CssIcon key={'CSS3'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>, 
-        <SassIcon key={'Sass'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>, 
-        <BsIcon key={'Bootstrap'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>, 
-        <TailIcon key={'Tailwind'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>, 
-        <ChakraIcon key={'ChakraUI'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>,
-        <JsIcon key={'Javascript'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>,
-        <TsIcon key={'Typescript'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>, 
-        <ReactIcon key={'ReactJs'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>,
-        <NextIcon key={'NextJs'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>,  
-        <StyledIcon key={'styled-components'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>, 
-        <HsIcon key={'Handlebars'} width={isMobile ? '10vw' : '9vw'} height={isMobile ? '10vh' : '9vh'}/>,
+        <HtmlIcon key={'HTML5'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>, 
+        <CssIcon key={'CSS3'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>, 
+        <SassIcon key={'Sass'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>, 
+        <BsIcon key={'Bootstrap'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>, 
+        <TailIcon key={'Tailwind'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>, 
+        <ChakraIcon key={'ChakraUI'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>,
+        <JsIcon key={'Javascript'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>,
+        <TsIcon key={'Typescript'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>, 
+        <ReactIcon key={'ReactJs'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>,
+        <NextIcon key={'NextJs'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>,  
+        <StyledIcon key={'styled-components'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>, 
+        <HsIcon key={'Handlebars'} width={isMobile ? '10vw' : '8vw'} height={isMobile ? '10vh' : '8vh'}/>,
     ];
 }

@@ -1,5 +1,3 @@
-import { useContext } from "react"
-import { ThemeContext } from "../../context/context"
 import { theme } from "../../theme/theme"
 
 interface Props {
@@ -8,11 +6,10 @@ interface Props {
 }
 
 export const Gmail: React.FC<Props> = ({ width, height }) => {
-    const darkTheme = useContext(ThemeContext)
 
     return (
         <svg 
-            fill={darkTheme ? theme.colors.white : theme.colors.black} 
+            fill={theme.colors.purpleWhite} 
             width={width ? width : '25px'} 
             height={height ? height : '25px'}
             viewBox="0 0 32 32" 

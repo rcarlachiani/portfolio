@@ -1,17 +1,17 @@
 import { useContext } from "react"
 import { ContainerFlex, Title } from "../../styles/globalStyles"
 import { theme } from "../../theme/theme"
-import { LanguageContext, ThemeContext } from "../../context/context"
+import { DeviceContext, LanguageContext } from "../../context/context"
 import { TitlesEN, TitlesES } from "../../translation/translation"
 import Project from "./project"
 import data from '../../projects/projects.json'
 import { SliderWrapper } from "./projectStyles"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 const Experience = () => {
     const language = useContext(LanguageContext);
-    const darkTheme = useContext(ThemeContext);
+    const { isMobile, isTablet } = useContext(DeviceContext);
 
     return (
         <ContainerFlex
@@ -20,14 +20,10 @@ const Experience = () => {
             width='inherit' 
             justifycontent='center'
             alignitems='center'
-            gap='0px'
-            gapsm='20px'
-            gapmd='25px'
-            gaplg='0px'
         >
             <Title
-                color={darkTheme ? theme.colors.white : theme.colors.black} 
-                fontsize='25px'
+                color={theme.colors.purpleWhite} 
+                fontSize='25px'
                 fontsizesm='28px'
                 fontsizemd='35px'
                 fontsizelg='45px'
@@ -39,18 +35,20 @@ const Experience = () => {
             />
             <SliderWrapper>
                 <Swiper
-                    autoplay={{
-                        delay: 3000,
-                        pauseOnMouseEnter: true,
-                    }}
-                    // autoplay={false}
-                    slidesPerView={3}
+                    // autoplay={{
+                    //     delay: 3000,
+                    //     pauseOnMouseEnter: true,
+                    // }}
+                    autoplay={false}
+                    spaceBetween={isTablet ? '20px' : '0px'}
+                    slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
                     grabCursor={true}
                     pagination={{
                         dynamicBullets: true,
                         clickable: true,
                     }}
-                    modules={[Pagination, Autoplay]}
+                    navigation={true}
+                    modules={[Pagination, Navigation, Autoplay]}
                     className="mySwiper"
                 >
                     {data.projects.map((project) => (
