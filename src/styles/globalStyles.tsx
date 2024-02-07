@@ -469,12 +469,9 @@ export const Subtitle = styled.h2<PropsText>`
 
 export const GradientBackground = styled.div`
     width: 100%;
-    height: 300px;
-    left: 0;
-    right: 0;
-    bottom: -300px;
-    margin: 0 auto;
+    height: 100px;
     position: absolute;
+    bottom: 0;
     background: radial-gradient(circle, rgba(255,0,128,1) 0%, rgba(121,40,202,1) 100%);
     border-radius: 100%;
     opacity: 0.7;

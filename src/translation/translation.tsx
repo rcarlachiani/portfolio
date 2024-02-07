@@ -31,5 +31,5 @@ export const SubtitlesES = {
 export const TextES = {
     technologies: "Tecnologías usadas:",
     goToSite: "Ir al sitio",
-    aboutMe: "En los comienzos de mi carrera, trabajé en una agencia creativa llamada <span><b>Genosha</b></span>, en donde he tenido la oportunidad de colaborar en proyectos que me han demandado grandes desafíos creativos.<br><br>Actualmente, trabajo para el <span><b>Ministerio de Hacienda y Finanzas de la Provincia de Buenos Aires</b></span> en el desarrollo de un sistema web interno utilizando React.Js y Django Rest, el cual tiene como objetivo oprtimizar la gestión de los municipios de la provincia de Buenos Aires."
+    aboutMe: "En los comienzos de mi carrera, trabajé en una agencia creativa llamada <span><b>Genosha</b></span>, donde he tenido la oportunidad de participar en proyectos que me han demandado grandes desafíos creativos y técnicos.<br><br>Actualmente, trabajo para el <span><b>Ministerio de Hacienda y Finanzas de la Prov. de Buenos Aires</b></span> en el desarrollo de un sistema web interno utilizando ReactJs y Python con Django REST Framework, el cual tiene como objetivo optimizar la gestión de los municipios de la provincia."
 }
