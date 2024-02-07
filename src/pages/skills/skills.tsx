@@ -12,9 +12,15 @@ const Skills = () => {
     return (
         <ContainerFlex 
             flexdirection='column'
-            height='inherit' 
-            width='inherit'
-            padding='0 10vw' 
+            width='inherit' 
+            height='calc(100vh - 150px)'
+            heightmd='calc(100vh - 135px)' 
+            margin='80px 0px 70px 0px'
+            marginmd='80px 0px 55px 0px'
+            overflowx='hidden'
+            overflowy='hidden'
+            gap='4vh'
+            gapsm='6vh'
             justifycontent='center'
             filter={theme.shadows.mainShadow}
         >
@@ -36,8 +42,7 @@ const Skills = () => {
                 }
             />
             <ContainerFlex
-                height='55vh'
-                heightsm='65vh'
+                height='60%'
                 alignitems='center'
                 justifycontent='center'
             >

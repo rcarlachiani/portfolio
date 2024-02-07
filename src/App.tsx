@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/bundle';
 import NavbarComponent from './components/navbar/navbar'
-import { ContainerFlex, GradientBackground, Section } from './styles/globalStyles'
+import { ContainerFlex, Section } from './styles/globalStyles'
 import { DeviceProvider, LanguageContext } from './context/context'
 import { theme } from './theme/theme'
 import MainPage from './pages/mainPage/mainPage'
@@ -27,6 +27,7 @@ function App() {
     <>
       <DeviceProvider>
         <LanguageContext.Provider value={language}>
+            <NavbarComponent setLanguage={setLanguage}/>
             <ContainerFlex
               flexdirection='column'
               alignitems='center'
@@ -36,10 +37,9 @@ function App() {
               width='100%'
               height='100vh'
               className='container'
-              padding='0px 35px' 
+              padding='0 10vw' 
               backgroundcolor={theme.colors.purpleBackground} 
             >
-              <NavbarComponent setLanguage={setLanguage}/>
               <Section>
                 <MainPage />
               </Section>
@@ -54,7 +54,6 @@ function App() {
               </Section>
             <SwipeAnimation />
             </ContainerFlex>
-            <GradientBackground />
             <ParticlesBackground /> 
         </LanguageContext.Provider>
       </DeviceProvider>

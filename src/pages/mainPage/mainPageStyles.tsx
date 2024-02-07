@@ -3,23 +3,25 @@ import { theme } from "../../theme/theme";
 
 export const MainPageImage = styled.img`
     display: flex;
-    width: 180px;
+    width: 200px;
 
     @media (${theme.breakpoints.sm}) {
-        width: 220px;
+        width: 250px;
     }
 
     @media (${theme.breakpoints.md}) {
-        align-self: center;
-        justify-self: start;
-        width: 240px;
+        width: 230px;
     }
 
     @media (${theme.breakpoints.lg}) {
-        width: 260px;
+        width: 280px;
     }
 
     @media (${theme.breakpoints.xl}) {
-        width: 18vw;
+        width: 300px;
+    }
+
+    @media (${theme.breakpoints.xxl}) {
+        width: 380px;
     }
 `

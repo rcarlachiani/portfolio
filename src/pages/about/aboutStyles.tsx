@@ -6,11 +6,15 @@ export const AboutImage = styled.img`
     width: 180px;
 
     @media (${theme.breakpoints.sm}) {
-        width: 260px;
+        width: 200px;
     }
 
     @media (${theme.breakpoints.md}) {
-        width: 260px;
+        width: 220px;
+    }
+
+    @media (${theme.breakpoints.md}) {
+        width: 240px;
     }
 
     @media (${theme.breakpoints.lg}) {
@@ -18,6 +22,6 @@ export const AboutImage = styled.img`
     }
 
     @media (${theme.breakpoints.xl}) {
-        width: 19vw;
+        width: 300px;
     }
 `

@@ -19,7 +19,7 @@ export const TextEN = {
 export const TitlesES = {
     greeting: "¡Hola!",
     about: "<span> Acerca</span> de mí",
-    skills: "<span>Tecnologías</span>\n con las que trabajo",
+    skills: "<span>Tecnologías</span> con\n las que trabajo",
     projects: "<span>Proyectos</span>\n que desarrollé"
 }
 

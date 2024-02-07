@@ -114,8 +114,28 @@ interface PropsContainerGrid {
     justifyitems?: string,
     justifycontent?: string,
     alignitems?: string,
+    justifyitemssm?: string,
+    justifycontentsm?: string,
+    alignitemssm?: string,
+    justifyitemsmd?: string,
+    justifycontentmd?: string,
+    alignitemsmd?: string,
+    justifyitemslg?: string,
+    justifycontentlg?: string,
+    alignitemslg?: string,
+    justifyitemsxl?: string,
+    justifycontentxl?: string,
+    alignitemsxl?: string,
     width?: string,
     height?: string,
+    widthsm?: string,
+    heightsm?: string,
+    widthmd?: string,
+    heightmd?: string,
+    widthlg?: string,
+    heightlg?: string,
+    widthxl?: string,
+    heightxl?: string,
     maxwidth?: string,
     maxheight?: string,
     margin?: string,
@@ -152,6 +172,7 @@ interface PropsText {
     fontsizemd?: string,
     fontsizelg?: string,
     fontsizexl?: string,
+    fontsizexxl?: string,
     lineheight?: string,
     lineheightsm?: string,
     lineheightmd?: string,
@@ -164,6 +185,10 @@ interface PropsText {
     textalignmd?: string,
     textalignlg?: string,
     alignself?: string,
+    alignselfsm?: string,
+    alignselfmd?: string,
+    alignselflg?: string,
+    alignselfxl?: string,
     justifyself?: string,
     padding?: string,
     paddingsm?: string,
@@ -228,6 +253,7 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
     @media (${theme.breakpoints.sm}) {
         flex-direction: ${(props) => props.flexdirectionsm};
+        justify-content: ${(props) => props.justifycontentsm};
         align-items: ${(props) => props.alignitemssm};
         align-self: ${(props) => props.alignselfsm};
         max-width: ${(props) => props.maxwidthsm};
@@ -240,6 +266,7 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
     @media (${theme.breakpoints.md}) {
         flex-direction: ${(props) => props.flexdirectionmd};
+        justify-content: ${(props) => props.justifycontentmd};
         align-items: ${(props) => props.alignitemsmd};
         gap: ${(props) => props.gapmd};
         margin: ${(props) => props.marginmd};
@@ -253,6 +280,7 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
     @media (${theme.breakpoints.lg}) {
         flex-direction: ${(props) => props.flexdirectionlg};
+        justify-content: ${(props) => props.justifycontentlg};
         align-items: ${(props) => props.alignitemslg};
         gap: ${(props) => props.gaplg};
         margin: ${(props) => props.marginlg};
@@ -265,6 +293,7 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
     }
 
     @media (${theme.breakpoints.xl}) {
+        justify-content: ${(props) => props.justifycontentxl};
         margin: ${(props) => props.marginxl};
         padding: ${(props) => props.paddingxl};
         gap: ${(props) => props.gapxl};
@@ -319,6 +348,11 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
         column-gap: ${(props) => props.columngapsm};
         row-gap: ${(props) => props.rowgapsm};
         padding: ${(props) => props.paddingsm};
+        justify-content: ${(props) => props.justifycontentsm};
+        justify-items: ${(props) => props.justifyitemssm};
+        align-items: ${(props) => props.alignitemssm};
+        width: ${(props) => props.widthsm};
+        height: ${(props) => props.heightsm};
     }
 
     @media (${theme.breakpoints.md}) {
@@ -328,6 +362,11 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
         column-gap: ${(props) => props.columngapmd};
         row-gap: ${(props) => props.rowgapmd};
         padding: ${(props) => props.paddingmd};
+        justify-content: ${(props) => props.justifycontentmd};
+        justify-items: ${(props) => props.justifyitemsmd};
+        align-items: ${(props) => props.alignitemsmd};
+        width: ${(props) => props.widthmd};
+        height: ${(props) => props.heightmd};
     }
 
     @media (${theme.breakpoints.lg}) {
@@ -338,6 +377,11 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
         row-gap: ${(props) => props.rowgaplg};
         margin: ${(props) => props.marginlg};
         padding: ${(props) => props.paddinglg};
+        justify-content: ${(props) => props.justifycontentlg};
+        justify-items: ${(props) => props.justifyitemslg};
+        align-items: ${(props) => props.alignitemslg};
+        width: ${(props) => props.widthlg};
+        height: ${(props) => props.heightlg};
     }
 
     @media (${theme.breakpoints.xl}) {
@@ -348,6 +392,11 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
         row-gap: ${(props) => props.rowgapxl};
         margin: ${(props) => props.marginxl};
         padding: ${(props) => props.paddingxl};
+        justify-content: ${(props) => props.justifycontentxl};
+        justify-items: ${(props) => props.justifyitemsxl};
+        align-items: ${(props) => props.alignitemsxl};
+        width: ${(props) => props.widthxl};
+        height: ${(props) => props.heightxl};
     }
 
     @media (${theme.breakpoints.xxl}) {
@@ -359,7 +408,7 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
 export const Section = styled.section<PropsSection>`
     display: flex;
     width: inherit;
-    height: 100vh;
+    height: 100%;
     position: relative;
     z-index: 1;
     justify-content: ${(props) => props.justifycontent ? props.justifycontent : 'center'};
@@ -412,6 +461,10 @@ export const Text = styled.p<PropsText>`
         font-size: ${(props) => props.fontsizexl};
         line-height: ${(props) => props.lineheightxl};
     }
+
+    @media (${theme.breakpoints.xxl}) {
+        font-size: ${(props) => props.fontsizexxl};
+    }
 `
 
 export const Title = styled.h1<PropsText>`
@@ -438,6 +491,7 @@ export const Title = styled.h1<PropsText>`
         margin: ${(props) => props.marginsm};
         padding: ${(props) => props.paddingsm};
         white-space: ${(props) => props.whitespacesm};
+        align-self: ${(props) => props.alignselfsm};
     }
 
     @media (${theme.breakpoints.md}) {
@@ -446,6 +500,7 @@ export const Title = styled.h1<PropsText>`
         margin: ${(props) => props.marginmd};
         padding: ${(props) => props.paddingmd};
         white-space: ${(props) => props.whitespacemd};
+        align-self: ${(props) => props.alignselfmd};
     }
 
     @media (${theme.breakpoints.lg}) {
@@ -454,43 +509,85 @@ export const Title = styled.h1<PropsText>`
         margin: ${(props) => props.marginlg};
         padding: ${(props) => props.paddinglg};
         white-space: ${(props) => props.whitespacelg};
+        align-self: ${(props) => props.alignselflg};
     }
 
     @media (${theme.breakpoints.xl}) {
         font-size: ${(props) => props.fontsizexl};
+        align-self: ${(props) => props.alignselfxl};
+    }
+
+    @media (${theme.breakpoints.xxl}) {
+        font-size: ${(props) => props.fontsizexxl};
     }
 `
 
 export const Subtitle = styled.h2<PropsText>`
+    display: ${(props) => props.display};
+    background: ${(props) => props.background};
+    -webkit-background-clip: ${(props) => props.backgroundclip && 'text'};
+    -webkit-text-fill-color: ${(props) => props.fillcolor && 'transparent'};
+    filter: ${(props) => props.filter};
+    grid-column: ${(props) => props.gridcolumn};
+    grid-row: ${(props) => props.gridrow};
     font-size: ${(props) => props.fontSize};
     line-height: ${(props) => props.lineheight};
     color: ${(props) => props.color};
-    filter: ${(props) => props.filter};
     text-align: ${(props) => props.textalign};
+    align-self: ${(props) => props.alignself};
+    justify-self: ${(props) => props.justifyself};
+    padding: ${(props) => props.padding};
     margin: ${(props) => props.margin};
+    white-space: ${(props) => props.whitespace};
+    
 
     @media (${theme.breakpoints.sm}) {
         font-size: ${(props) => props.fontsizesm};
+        text-align: ${(props) => props.textalignsm};
         margin: ${(props) => props.marginsm};
+        padding: ${(props) => props.paddingsm};
+        white-space: ${(props) => props.whitespacesm};
+        align-self: ${(props) => props.alignselfsm};
+    }
+
+    @media (${theme.breakpoints.md}) {
+        font-size: ${(props) => props.fontsizemd};
+        text-align: ${(props) => props.textalignmd};
+        margin: ${(props) => props.marginmd};
+        padding: ${(props) => props.paddingmd};
+        white-space: ${(props) => props.whitespacemd};
+        align-self: ${(props) => props.alignselfmd};
     }
 
     @media (${theme.breakpoints.lg}) {
         font-size: ${(props) => props.fontsizelg};
         text-align: ${(props) => props.textalignlg};
         margin: ${(props) => props.marginlg};
+        padding: ${(props) => props.paddinglg};
+        white-space: ${(props) => props.whitespacelg};
+        align-self: ${(props) => props.alignselflg};
+    }
+
+    @media (${theme.breakpoints.xl}) {
+        font-size: ${(props) => props.fontsizexl};
+        align-self: ${(props) => props.alignselfxl};
+    }
+
+    @media (${theme.breakpoints.xxl}) {
+        font-size: ${(props) => props.fontsizexxl};
     }
 `
 
 export const GradientBackground = styled.div`
     width: 100%;
-    height: 300px;
+    height: 100px;
     left: 0;
     right: 0;
-    bottom: -300px;
+    bottom: 0;
     margin: 0 auto;
     position: absolute;
     background: radial-gradient(circle, rgba(255,0,128,1) 0%, rgba(121,40,202,1) 100%);
-    border-radius: 100%;
-    opacity: 0.7;
-    filter: blur(150px);
+    border-radius: 50%;
+    opacity: 0.6;
+    filter: blur(180px);
 `

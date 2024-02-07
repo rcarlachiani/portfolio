@@ -6,7 +6,8 @@
 }
 
 .html, body {
-  font-family: 'Mulish', sans-serif;
+  font-family: 'Sora', sans-serif;
+  font-weight: 200;
   scrollbar-width: none;
   ::-webkit-scrollbar {
     display: none;

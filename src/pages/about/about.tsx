@@ -11,25 +11,27 @@ const About = () => {
 
     return (
         <ContainerFlex 
-            height='inherit'
-            width='inherit'
-            padding='0'
-            paddingsm='0 8vw'
-            paddingmd='0 10vw'
+            width='inherit' 
+            height='calc(100vh - 150px)'
+            heightmd='calc(100vh - 135px)' 
+            margin='80px 0px 70px 0px'
+            marginmd='80px 0px 55px 0px'
+            overflowx='hidden'
+            overflowy='hidden'
             justifycontent='center'
             flexdirection='column'
             alignitems='center'
-            gap='15px'
-            gapmd='0px'
+            gap='2vh'
+            gaplg='50px'
             filter={theme.shadows.mainShadow}
         >
             <Title
                 color={theme.colors.purpleWhite} 
                 fontSize='25px'
-                fontsizesm='35px'
-                fontsizemd='46px'
-                fontsizelg='52px'
-                fontsizexl='3.5vw'
+                fontsizesm='28px'
+                fontsizemd='35px'
+                fontsizelg='45px'
+                fontsizexl='55px'
                 dangerouslySetInnerHTML={
                     {__html: language === 'en' ? 
                         (isMobile ? TitlesEN.about :  TitlesEN.about) 
@@ -38,31 +40,28 @@ const About = () => {
                 }
             />
                 <ContainerFlex 
-                    height='65vh'
                     flexdirection='column'
                     flexdirectionlg='row'
                     alignitems='center'
-                    justifycontent='space-evenly'
-                    gap='20px'
-                    gaplg='50px'
+                    justifycontent='center'
+                    gap='4vh'
+                    gaplg='80px'
                 >
                     <AboutImage src='/images/profile-picture-perspective-II.png' />
                     <ContainerFlex
                         overflowy='scroll'
-                        maxwidth='60vw'
-                        maxwidthsm='50vw'
-                        maxwidthxl='40vw'
+                        padding='0 6vw'
+                        paddingsm='0 8vw'
+                        paddinglg='0'
                     >
                         <Text
                             color={theme.colors.purpleWhite}  
-                            fontSize='11px'
+                            fontSize='12px'
                             fontsizesm='14px'
                             fontsizemd='16px'
-                            fontsizexl='1.1vw'
-                            lineheight='16px'
-                            lineheightmd='20px'
-                            lineheightlg='18px'
-                            lineheightxl='unset'
+                            fontsizelg='18px'
+                            fontsizexl='20px'
+                            fontsizexxl='26px'
                             textalign='start'
                             dangerouslySetInnerHTML={{__html: language === 'en' ? TextEN.aboutMe : TextES.aboutMe }}
                         />

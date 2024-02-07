@@ -40,7 +40,6 @@ const Burguer = () => {
                     >
                         <Linkedin 
                             width='20px'
-                            height='20px'
                         />
                     </NavbarLink>
                     <NavbarLink 
@@ -51,7 +50,6 @@ const Burguer = () => {
                     >
                         <Github 
                             width='20px'
-                            height='20px'
                         />
                     </NavbarLink>
                     <NavbarLink 
@@ -62,7 +60,6 @@ const Burguer = () => {
                     >
                         <Gmail 
                             width='20px'
-                            height='20px'
                         />
                     </NavbarLink>
                     <NavbarLink 
@@ -73,7 +70,6 @@ const Burguer = () => {
                     >
                         <Wpp 
                             width='20px'
-                            height='20px'
                         />
                     </NavbarLink>
                 </ContainerFlex>

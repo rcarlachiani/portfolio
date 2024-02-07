@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ContainerFlex, Title } from "../../styles/globalStyles"
+import { ContainerFlex, Subtitle, Title } from "../../styles/globalStyles"
 import { theme } from "../../theme/theme"
 import { MainPageImage } from "./mainPageStyles"
 import { LanguageContext } from "../../context/context"
@@ -11,52 +11,60 @@ const MainPage = () => {
     return (
         <ContainerFlex
             flexdirection='column'
-            flexdirectionmd='row' 
-            height='inherit' 
+            flexdirectionmd='row'
             width='inherit' 
+            height='calc(100vh - 150px)'
+            heightmd='calc(100vh - 135px)' 
+            margin='80px 0px 70px 0px'
+            marginmd='80px 0px 55px 0px'
+            overflowx='hidden'
+            overflowy='hidden'
             justifycontent='center'
             alignitems='center'
-            padding='0'
-            paddingsm='0 8vw' 
-            gap='60px'
-            gaplg='120px'
+            gap='6vh'
+            gapsm='8vw'
             filter={theme.shadows.mainShadow}
         >
             <ContainerFlex 
                 flexdirection='column'
                 width='fit-content'
+                alignitems='center'
+                alignitemsmd='flex-start'
             >
                 <Title 
                     backgroundclip='true'
                     fillcolor='true'
                     background='linear-gradient(310deg,#7928ca,#ff0080)'
-                    fontSize='55px'
+                    fontSize='45px'
                     fontsizesm='62px'
-                    fontsizemd='68px'
-                    fontsizelg='80px'
-                    fontsizexl='6vw'
+                    fontsizemd='60px'
+                    fontsizelg='70px'
+                    fontsizexl='80px'
+                    fontsizexxl='90px'
                     textalign='center'
                     textalignmd='end'
                     dangerouslySetInnerHTML={{__html: language === 'en' ? TitlesEN.greeting : TitlesES.greeting }}
                 />
-                <Title
+                <Subtitle
                     color={theme.colors.purpleWhite}  
-                    fontSize='34px'
-                    fontsizesm='38px'
-                    fontsizemd='42px'
-                    fontsizelg='52px'
-                    fontsizexl='4.5vw'
+                    fontSize='36px'
+                    fontsizesm='45px'
+                    fontsizemd='50px'
+                    fontsizelg='60px'
+                    fontsizexl='80px'
+                    fontsizexxl='100px'
                     textalign='center'
                     textalignmd='end' 
                     dangerouslySetInnerHTML={{__html: language === 'en' ? SubtitlesEN.whoIAm : SubtitlesES.whoIAm }}
                 />
-                <Title
+                <Subtitle
                     color={theme.colors.purpleWhite}  
-                    fontSize='16px'
-                    fontsizesm='18px'
-                    fontsizemd='20px'
-                    fontsizelg='24px'
-                    fontsizexl='2.1vw'
+                    fontSize='18px'
+                    fontsizesm='22px'
+                    fontsizemd='24px'
+                    fontsizelg='29px'
+                    fontsizexl='39px'
+                    fontsizexxl='48px'
                     textalign='center' 
                     textalignmd='end'
                     dangerouslySetInnerHTML={{__html: language === 'en' ? SubtitlesEN.role : SubtitlesES.role }}

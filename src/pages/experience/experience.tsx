@@ -16,8 +16,15 @@ const Experience = () => {
     return (
         <ContainerFlex
             flexdirection='column' 
-            height='inherit' 
             width='inherit' 
+            height='calc(100vh - 150px)'
+            heightmd='calc(100vh - 135px)' 
+            margin='80px 0px 70px 0px'
+            marginmd='80px 0px 55px 0px'
+            overflowx='hidden'
+            overflowy='hidden'
+            gap='4vh'
+            gapsm='6vh'
             justifycontent='center'
             alignitems='center'
         >
@@ -45,10 +52,10 @@ const Experience = () => {
                     spaceBetween={isTablet ? '20px' : '0px'}
                     slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
                     grabCursor={true}
-                    pagination={{
-                        dynamicBullets: true,
-                        clickable: true,
-                    }}
+                    // pagination={{
+                    //     dynamicBullets: true,
+                    //     clickable: true,
+                    // }}
                     navigation={true}
                     modules={[Pagination, Navigation, Autoplay]}
                     className="mySwiper"

@@ -3,6 +3,7 @@ import type { Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import { theme } from "../../theme/theme";
+import { GradientBackground } from "../../styles/globalStyles";
 
 const ParticlesBackground = () => {
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -38,13 +39,6 @@ const ParticlesBackground = () => {
                     color: {
                         value: theme.colors.purpleParticles,
                     },
-                    // links: {
-                    //     color: theme.colors.purpleParticles,
-                    //     distance: 180,
-                    //     enable: true,
-                    //     opacity: 0.4,
-                    //     width: 1.5,
-                    // },
                     collisions: {
                         enable: true,
                     },
@@ -78,6 +72,7 @@ const ParticlesBackground = () => {
                 detectRetina: true,
             }}
             />
+            <GradientBackground />
         </>
     )
 }
