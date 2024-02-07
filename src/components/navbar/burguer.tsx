@@ -24,11 +24,13 @@ const Burguer = () => {
                     justifycontent='center' 
                     flexdirection='column'
                     position='absolute'
-                    padding='0px 5px'
-                    top='40px'
+                    padding='0px 8px'
+                    top='50px'
+                    backgroundcolor='hsla(242.2, 49.4%, 67.45%, 0.1)'
                     backgroundblur='blur(4px)'
-                    borderradius='8px'
+                    borderradius='0px 0px 15px 15px'
                     display={open ? 'flex' : 'none'}
+                    zindex={5}
                 >
                     <NavbarLink 
                         href='https://www.linkedin.com/in/rcarlachiani' 
