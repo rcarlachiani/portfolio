@@ -2,10 +2,9 @@ import { theme } from "../../theme/theme"
 
 interface Props {
     width?: string | number,
-    height?: string | number,
 }
 
-export const CssIcon: React.FC<Props> = ({ width, height }) => {
+export const CssIcon: React.FC<Props> = ({ width }) => {
 
     return(
         <svg 
@@ -14,7 +13,6 @@ export const CssIcon: React.FC<Props> = ({ width, height }) => {
             xmlns="http://www.w3.org/2000/svg" 
             xmlnsXlink="http://www.w3.org/1999/xlink"  
             width={width ? width : '9vw'} 
-            height={height ? height : '9vh'} 
             viewBox="0 0 512 512" 
             enableBackground="new 0 0 512 512" 
             xmlSpace="preserve"

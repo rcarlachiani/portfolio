@@ -2,15 +2,13 @@ import { theme } from "../../theme/theme"
 
 interface Props {
     width?: string | number,
-    height?: string | number,
 }
 
-export const TailIcon: React.FC<Props> = ({ width, height }) => {
+export const TailIcon: React.FC<Props> = ({ width }) => {
     
     return(
         <svg 
             width={width ? width : '9vw'} 
-            height={height ? height : '9vh'}
             viewBox="0 0 15 15" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"

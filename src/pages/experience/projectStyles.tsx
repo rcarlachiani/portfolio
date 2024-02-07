@@ -21,10 +21,11 @@ export const CardWrapper = styled.div`
 export const SliderWrapper = styled.div`
     display: flex;
     max-width: 320px;
-    height: 60vh;
+    height: 55vh;
 
     @media (${theme.breakpoints.sm}) {
         max-width: 600px;
+        height: 65vh;
     } 
  
     @media (${theme.breakpoints.lg}) {

@@ -2,16 +2,14 @@ import { theme } from "../../theme/theme"
 
 interface Props {
     width?: string | number,
-    height?: string | number,
 }
 
-export const Linkedin: React.FC<Props> = ({ width, height }) => {
+export const Linkedin: React.FC<Props> = ({ width }) => {
 
     return (
         <svg 
             fill={theme.colors.purpleWhite} 
             width={width ? width : '25px'} 
-            height={height ? height : '25px'} 
             version="1.1" 
             id="Layer_1" 
             xmlns="http://www.w3.org/2000/svg" 

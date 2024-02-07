@@ -26,6 +26,8 @@ const Skills = () => {
                 fontsizelg='45px'
                 fontsizexl="3.4vw"
                 textalign='center'
+                whitespace='pre'
+                whitespacesm='unset'
                 dangerouslySetInnerHTML={
                     {__html: language === 'en' ? 
                         (isMobile ? TitlesEN.skills :  TitlesEN.skills.replace('<br>', '')) 
@@ -34,26 +36,27 @@ const Skills = () => {
                 }
             />
             <ContainerFlex
-                height='65vh'
-                heightmd='60vh'
+                height='55vh'
+                heightsm='65vh'
                 alignitems='center'
                 justifycontent='center'
             >
                 <ContainerGrid
                     templatecols='repeat(3, 1fr)'
                     templatecolssm='repeat(4, 1fr)'
-                    templatecolsmd='repeat(6, 0.13fr)'
+                    templatecolslg='repeat(6, 0.13fr)'
                     templaterows='repeat(4, 0.2fr)'
                     templaterowssm='repeat(3, 0.5fr)'
-                    templaterowsmd='repeat(2, 0.3fr)'
+                    templaterowslg='repeat(2, 0.3fr)'
                     columngap='30px'
-                    columngapmd='40px'
-                    columngaplg='50px'
-                    columngapxl='30px'
-                    rowgap='10px'
-                    rowgapsm='30px'
-                    rowgapmd='60px'
-                    rowgapxl='80px'
+                    columngapmd='60px'
+                    columngaplg='40px'
+                    columngapxl='60px'
+                    columngapxxl='80px'
+                    rowgap='20px'
+                    rowgapsm='60px'
+                    rowgapmd='40px'
+                    rowgaplg='60px'
                 >
                     {IconsSkills().map((icon) => (
                         <ContainerFlex 
@@ -64,8 +67,7 @@ const Skills = () => {
                         >
                             {icon}
                             <Text
-                                margin='0px'
-                                marginsm='10px 0px 0px 0px'
+                                margin='10px 0px 0px 0px'
                                 marginmd='20px 0px 0px 0px'
                                 fontSize='10px'
                                 fontsizemd='14px'

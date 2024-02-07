@@ -25,7 +25,7 @@ span {
 }
 
 .swiper-pagination {
-  bottom: -20px !important;
+  bottom: unset !important;
   padding: 6px;
   background-color: hsla(242.2, 49.4%, 67.45%, 0.1);
   backdrop-filter: blur(6px);

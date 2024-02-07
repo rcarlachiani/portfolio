@@ -1,8 +1,8 @@
 export const TitlesEN = {
     greeting: "Hello!",
-    about: "About <span>me</span>",
-    skills: "<br>Technolgies I <span>work</span> with",
-    projects: "<span>Projects</span> I've built",
+    about: "<span> About</span> me",
+    skills: "<span>Technolgies</span> \n I work with",
+    projects: "<span>Projects</span>\n I've built",
 }
 
 export const SubtitlesEN = {
@@ -18,9 +18,9 @@ export const TextEN = {
 
 export const TitlesES = {
     greeting: "¡Hola!",
-    about: "Acerca de <span>mí</span>",
-    skills: "<br>Tecnologías con las que <span>trabajo</span>",
-    projects: "<span>Proyectos</span> que desarrollé"
+    about: "<span> Acerca</span> de mí",
+    skills: "<span>Tecnologías</span>\n con las que trabajo",
+    projects: "<span>Proyectos</span>\n que desarrollé"
 }
 
 export const SubtitlesES = {

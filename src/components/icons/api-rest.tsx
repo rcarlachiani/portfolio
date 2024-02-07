@@ -2,16 +2,14 @@ import { theme } from "../../theme/theme"
 
 interface Props {
     width?: string | number,
-    height?: string | number,
 }
 
-export const ApiIcon: React.FC<Props> = ({ width, height }) => {
+export const ApiIcon: React.FC<Props> = ({ width }) => {
 
     return(
         <svg 
             fill={theme.colors.white}
             width={width ? width : '9vw'} 
-            height={height ? height : '9vh'} 
             version="1.1" 
             id="Capa_1" 
             xmlns="http://www.w3.org/2000/svg"

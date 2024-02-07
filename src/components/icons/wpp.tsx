@@ -2,16 +2,14 @@ import { theme } from "../../theme/theme"
 
 interface Props {
     width?: string | number,
-    height?: string | number,
 }
 
-export const Wpp: React.FC<Props> = ({ width, height }) => {
+export const Wpp: React.FC<Props> = ({ width }) => {
 
     return (
         <svg 
             fill={theme.colors.purpleWhite} 
             width={width ? width : '25px'} 
-            height={height ? height : '25px'} 
             viewBox="0 0 16 16" 
             xmlns="http://www.w3.org/2000/svg"
         >

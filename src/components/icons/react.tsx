@@ -2,15 +2,13 @@ import { theme } from "../../theme/theme"
 
 interface Props {
     width?: string | number,
-    height?: string | number,
 }
 
-export const ReactIcon: React.FC<Props> = ({ width, height }) => {
+export const ReactIcon: React.FC<Props> = ({ width }) => {
 
     return(
         <svg 
             width={width ? width : '9vw'} 
-            height={height ? height : '9vh'}
             viewBox="0 0 24 24" 
             xmlns="http://www.w3.org/2000/svg"
             fill={theme.colors.purpleWhite}

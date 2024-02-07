@@ -16,7 +16,7 @@ import SwipeAnimation from './components/swipeAnimation/swipeAnimation';
 
 function App() {
   const [language, setLanguage] = useState<string>(
-    localStorage.getItem('language') || 'en'
+    localStorage.getItem('language') || 'es'
   );
 
   useEffect(() => {

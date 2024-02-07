@@ -101,11 +101,13 @@ interface PropsContainerGrid {
     columngapmd?: string,
     columngaplg?: string,
     columngapxl?: string,
+    columngapxxl?: string,
     rowgap?: string,
     rowgapsm?: string,
     rowgapmd?: string,
     rowgaplg?: string,
     rowgapxl?: string,
+    rowgapxxl?: string,
     position?: string,
     top?: string,
     bottom?: string,
@@ -175,6 +177,9 @@ interface PropsText {
     hoverweight?: string,
     transition?: string,
     whitespace?: string,
+    whitespacesm?: string,
+    whitespacemd?: string,
+    whitespacelg?: string,
     textoverflow?: string,
     background?: string,
     backgroundclip?: string,
@@ -344,6 +349,11 @@ export const ContainerGrid = styled.div<PropsContainerGrid>`
         margin: ${(props) => props.marginxl};
         padding: ${(props) => props.paddingxl};
     }
+
+    @media (${theme.breakpoints.xxl}) {
+        column-gap: ${(props) => props.columngapxxl};
+        row-gap: ${(props) => props.rowgapxxl};
+    }
 `
 
 export const Section = styled.section<PropsSection>`
@@ -420,12 +430,14 @@ export const Title = styled.h1<PropsText>`
     justify-self: ${(props) => props.justifyself};
     padding: ${(props) => props.padding};
     margin: ${(props) => props.margin};
+    white-space: ${(props) => props.whitespace};
 
     @media (${theme.breakpoints.sm}) {
         font-size: ${(props) => props.fontsizesm};
         text-align: ${(props) => props.textalignsm};
         margin: ${(props) => props.marginsm};
         padding: ${(props) => props.paddingsm};
+        white-space: ${(props) => props.whitespacesm};
     }
 
     @media (${theme.breakpoints.md}) {
@@ -433,6 +445,7 @@ export const Title = styled.h1<PropsText>`
         text-align: ${(props) => props.textalignmd};
         margin: ${(props) => props.marginmd};
         padding: ${(props) => props.paddingmd};
+        white-space: ${(props) => props.whitespacemd};
     }
 
     @media (${theme.breakpoints.lg}) {
@@ -440,6 +453,7 @@ export const Title = styled.h1<PropsText>`
         text-align: ${(props) => props.textalignlg};
         margin: ${(props) => props.marginlg};
         padding: ${(props) => props.paddinglg};
+        white-space: ${(props) => props.whitespacelg};
     }
 
     @media (${theme.breakpoints.xl}) {

@@ -30,6 +30,8 @@ const Experience = () => {
                 fontsizexl="3.4vw"
                 textalign='center'
                 padding='0 8vw'
+                whitespace='pre'
+                whitespacesm='unset'
                 filter={theme.shadows.mainShadow}
                 dangerouslySetInnerHTML={{__html: language === 'en' ? TitlesEN.projects : TitlesES.projects }}
             />
