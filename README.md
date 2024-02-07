@@ -11,7 +11,7 @@ Sitio que busca reflejar mi perfil, habilidades, proyectos y experiencia como de
 
 Desarrollado con:
 
-[![My Skills](https://skillicons.dev/icons?i=vite,react,styledcomponents)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=vite,react,typescript,styledcomponents)](https://skillicons.dev)
 
 Deployado en:
 
@@ -31,7 +31,7 @@ I invite you to explore it!
 
 Developed with:
 
-[![My Skills](https://skillicons.dev/icons?i=vite,react,styledcomponents)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=vite,react,typescript,styledcomponents)](https://skillicons.dev)
 
 Deployed at:
 
