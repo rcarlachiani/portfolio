@@ -35,7 +35,7 @@ function App() {
               overscrolly='contain'
               scrollsnap='y mandatory'
               width='100%'
-              height='100vh'
+              height='100dvh'
               className='container'
               padding='0 10vw' 
               backgroundcolor={theme.colors.purpleBackground} 

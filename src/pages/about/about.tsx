@@ -12,8 +12,8 @@ const About = () => {
     return (
         <ContainerFlex 
             width='inherit' 
-            height='calc(100vh - 150px)'
-            heightmd='calc(100vh - 135px)' 
+            height='calc(100dvh - 150px)'
+            heightmd='calc(100dvh - 135px)' 
             margin='80px 0px 70px 0px'
             marginmd='80px 0px 55px 0px'
             overflowx='hidden'
@@ -21,7 +21,7 @@ const About = () => {
             justifycontent='center'
             flexdirection='column'
             alignitems='center'
-            gap='2vh'
+            gap='2dvh'
             gaplg='50px'
             filter={theme.shadows.mainShadow}
         >
@@ -44,7 +44,7 @@ const About = () => {
                     flexdirectionlg='row'
                     alignitems='center'
                     justifycontent='center'
-                    gap='4vh'
+                    gap='4dvh'
                     gaplg='80px'
                 >
                     <AboutImage src='/images/profile-picture-perspective-II.png' />

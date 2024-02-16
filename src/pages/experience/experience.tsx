@@ -17,14 +17,14 @@ const Experience = () => {
         <ContainerFlex
             flexdirection='column' 
             width='inherit' 
-            height='calc(100vh - 150px)'
-            heightmd='calc(100vh - 135px)' 
+            height='calc(100dvh - 150px)'
+            heightmd='calc(100dvh - 135px)' 
             margin='80px 0px 70px 0px'
             marginmd='80px 0px 55px 0px'
             overflowx='hidden'
             overflowy='hidden'
-            gap='4vh'
-            gapsm='6vh'
+            gap='4dvh'
+            gapsm='6dvh'
             justifycontent='center'
             alignitems='center'
         >
@@ -52,6 +52,7 @@ const Experience = () => {
                     spaceBetween={isTablet ? '20px' : '0px'}
                     slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
                     grabCursor={true}
+                    touchMoveStopPropagation={true}
                     // pagination={{
                     //     dynamicBullets: true,
                     //     clickable: true,
