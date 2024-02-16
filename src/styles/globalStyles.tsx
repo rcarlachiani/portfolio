@@ -412,7 +412,7 @@ export const Section = styled.section<PropsSection>`
     position: relative;
     z-index: 1;
     justify-content: ${(props) => props.justifycontent ? props.justifycontent : 'center'};
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 `
 
 export const Text = styled.p<PropsText>`
