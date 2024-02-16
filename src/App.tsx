@@ -37,7 +37,7 @@ function App() {
               width='100%'
               height='100dvh'
               className='container'
-              padding='0 10vw' 
+              // padding='0 10vw' 
               backgroundcolor={theme.colors.purpleBackground} 
             >
               <Section>
