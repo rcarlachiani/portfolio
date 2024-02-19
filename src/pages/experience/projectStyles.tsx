@@ -10,31 +10,3 @@ export const ProjectLink = styled.a`
     text-decoration: none;
     color: ${theme.colors.black};
 `
-
-export const CardWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: inherit;
-`
-
-export const SliderWrapper = styled.div`
-    display: flex;
-    max-width: 320px;
-
-    @media (${theme.breakpoints.sm}) {
-        max-width: 600px;
-    } 
- 
-    @media (${theme.breakpoints.lg}) {
-        max-width: 650px;
-    }
-
-    @media (${theme.breakpoints.xl}) {
-        max-width: 90%;
-    }  
-
-    @media (${theme.breakpoints.xxl}) {
-        max-width: 70%;
-    }  
-`

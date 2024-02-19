@@ -11,16 +11,19 @@ const Button = () => {
     return (
         <>
             <ButtonGradient
-                width='60px'
+                width='53px'
                 height='20px'
-                widthsm='80px'
-                heightsm='25px'
+                widthsm='65px'
+                heightsm='24px'
+                widthlg='80px'
+                heightlg='28px'
                 alignitems='center'
                 justifycontent='center'
             >
                 <Text 
                     fontSize='10px'
                     fontsizesm='12px'
+                    fontsizelg='14px'
                     color={theme.colors.purpleWhite}
                     dangerouslySetInnerHTML={{__html: language === 'en' ? TextEN.goToSite : TextES.goToSite }}
                 />

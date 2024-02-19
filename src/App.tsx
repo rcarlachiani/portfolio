@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react'
 import './styles/App.css'
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/bundle';
 import NavbarComponent from './components/navbar/navbar'
 import { ContainerFlex, Section } from './styles/globalStyles'
 import { DeviceProvider, LanguageContext } from './context/context'

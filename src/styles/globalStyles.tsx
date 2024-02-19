@@ -11,11 +11,31 @@ interface PropsContainerFlex {
     flexdirectionmd?: string,
     flexdirectionlg?: string,
     flexdirectionxl?: string,
+    flexwrap?: string,
+    flexbasis?: string,
+    flexbasissm?: string,
+    flexbasismd?: string,
+    flexbasislg?: string,
+    flexbasisxl?: string,
+    flexbasisxxl?: string,
     gap?: string,
     gapsm?: string,
     gapmd?: string,
     gaplg?: string,
     gapxl?: string,
+    gapxxl?: string,
+    rowgap?: string,
+    rowgapsm?: string,
+    rowgapmd?: string,
+    rowgaplg?: string,
+    rowgapxl?: string,
+    rowgapxxl?: string,
+    columngap?: string,
+    columngapsm?: string,
+    columngapmd?: string,
+    columngaplg?: string,
+    columngapxl?: string,
+    columngapxxl?: string,
     justifycontent?: string,
     justifycontentsm?: string,
     justifycontentmd?: string,
@@ -64,6 +84,7 @@ interface PropsContainerFlex {
     paddingmd?: string,
     paddinglg?: string,
     paddingxl?: string,
+    paddingxxl?: string,
     border?: string,
     borderradius?: string,
     backgroundcolor?: string,
@@ -79,85 +100,6 @@ interface PropsContainerFlex {
     cursor?: string,
     zindex?: number,
 }
-
-interface PropsContainerGrid {
-    templatecols?: string,
-    templatecolssm?: string,
-    templatecolsmd?: string,
-    templatecolslg?: string,
-    templatecolsxl?: string,
-    templaterows?: string,
-    templaterowssm?: string,
-    templaterowsmd?: string,
-    templaterowslg?: string,
-    templaterowsxl?: string,
-    gap?: string,
-    gapsm?: string,
-    gapmd?: string,
-    gaplg?: string,
-    gapxl?: string,
-    columngap?: string,
-    columngapsm?: string,
-    columngapmd?: string,
-    columngaplg?: string,
-    columngapxl?: string,
-    columngapxxl?: string,
-    rowgap?: string,
-    rowgapsm?: string,
-    rowgapmd?: string,
-    rowgaplg?: string,
-    rowgapxl?: string,
-    rowgapxxl?: string,
-    position?: string,
-    top?: string,
-    bottom?: string,
-    justifyitems?: string,
-    justifycontent?: string,
-    alignitems?: string,
-    justifyitemssm?: string,
-    justifycontentsm?: string,
-    alignitemssm?: string,
-    justifyitemsmd?: string,
-    justifycontentmd?: string,
-    alignitemsmd?: string,
-    justifyitemslg?: string,
-    justifycontentlg?: string,
-    alignitemslg?: string,
-    justifyitemsxl?: string,
-    justifycontentxl?: string,
-    alignitemsxl?: string,
-    width?: string,
-    height?: string,
-    widthsm?: string,
-    heightsm?: string,
-    widthmd?: string,
-    heightmd?: string,
-    widthlg?: string,
-    heightlg?: string,
-    widthxl?: string,
-    heightxl?: string,
-    maxwidth?: string,
-    maxheight?: string,
-    margin?: string,
-    marginsm?: string,
-    marginmd?: string,
-    marginlg?: string,
-    marginxl?: string,
-    padding?: string,
-    paddingsm?: string,
-    paddingmd?: string,
-    paddinglg?: string,
-    paddingxl?: string,
-    border?: string,
-    backgroundcolor?: string,
-    filter?: string,
-    overflowy?: string,
-    overflowx?: string,
-    overscrolly?: string,
-    overscrollx?: string,
-    scrollsnap?: string,
-}
-
 interface PropsSection {
     display?: string,
     justifycontent?: string,
@@ -221,7 +163,11 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
     top: ${(props) => props.top};
     bottom: ${(props) => props.bottom};
     flex-direction: ${(props) => props.flexdirection};
+    flex-wrap: ${(props) => props.flexwrap};
+    flex-basis: ${(props) => props.flexbasis};
     gap: ${(props) => props.gap};
+    row-gap: ${(props) => props.rowgap};
+    column-gap: ${(props) => props.columngap};
     justify-content: ${(props) => props.justifycontent};
     justify-self: ${(props) => props.justifyself};
     align-items: ${(props) => props.alignitems};
@@ -253,11 +199,14 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
     @media (${theme.breakpoints.sm}) {
         flex-direction: ${(props) => props.flexdirectionsm};
+        flex-basis: ${(props) => props.flexbasissm};
         justify-content: ${(props) => props.justifycontentsm};
         align-items: ${(props) => props.alignitemssm};
         align-self: ${(props) => props.alignselfsm};
         max-width: ${(props) => props.maxwidthsm};
         gap: ${(props) => props.gapsm};
+        row-gap: ${(props) => props.rowgapsm};
+        column-gap: ${(props) => props.columngapsm};
         margin: ${(props) => props.marginsm};
         width: ${(props) => props.widthsm};
         height: ${(props) => props.heightsm};
@@ -266,9 +215,12 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
     @media (${theme.breakpoints.md}) {
         flex-direction: ${(props) => props.flexdirectionmd};
+        flex-basis: ${(props) => props.flexbasismd};
         justify-content: ${(props) => props.justifycontentmd};
         align-items: ${(props) => props.alignitemsmd};
         gap: ${(props) => props.gapmd};
+        row-gap: ${(props) => props.rowgapmd};
+        column-gap: ${(props) => props.columngapmd};
         margin: ${(props) => props.marginmd};
         padding: ${(props) => props.paddingmd};
         justify-self: ${(props) => props.justifyselfmd};
@@ -280,9 +232,12 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
     @media (${theme.breakpoints.lg}) {
         flex-direction: ${(props) => props.flexdirectionlg};
+        flex-basis: ${(props) => props.flexbasislg};
         justify-content: ${(props) => props.justifycontentlg};
         align-items: ${(props) => props.alignitemslg};
         gap: ${(props) => props.gaplg};
+        row-gap: ${(props) => props.rowgaplg};
+        column-gap: ${(props) => props.columngaplg};
         margin: ${(props) => props.marginlg};
         padding: ${(props) => props.paddinglg};
         justify-self: ${(props) => props.justifyselflg};
@@ -294,9 +249,12 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
     @media (${theme.breakpoints.xl}) {
         justify-content: ${(props) => props.justifycontentxl};
+        flex-basis: ${(props) => props.flexbasisxl};
         margin: ${(props) => props.marginxl};
         padding: ${(props) => props.paddingxl};
         gap: ${(props) => props.gapxl};
+        row-gap: ${(props) => props.rowgapxl};
+        column-gap: ${(props) => props.columngapxl};
         width: ${(props) => props.widthxl};
         height: ${(props) => props.heightxl};
         max-width: ${(props) => props.maxwidthxl};
@@ -304,104 +262,13 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 
 
     @media (${theme.breakpoints.xxl}) {
+        flex-basis: ${(props) => props.flexbasisxxl};
         width: ${(props) => props.widthxxl};
         height: ${(props) => props.heightxxl};
-    }
-`
-
-export const ContainerGrid = styled.div<PropsContainerGrid>`
-    display: grid;
-    grid-template-columns: ${(props) => props.templatecols};
-    grid-template-rows: ${(props) => props.templaterows};
-    gap: ${(props) => props.gap};
-    column-gap: ${(props) => props.columngap};
-    row-gap: ${(props) => props.rowgap};
-    position: ${(props) => props.position};
-    top: ${(props) => props.top};
-    bottom: ${(props) => props.bottom};
-    justify-content: ${(props) => props.justifycontent};
-    justify-items: ${(props) => props.justifyitems};
-    align-items: ${(props) => props.alignitems};
-    width: ${(props) => props.width};
-    height: ${(props) => props.height};
-    max-width: ${(props) => props.maxwidth};
-    max-height: ${(props) => props.maxheight};
-    margin: ${(props) => props.margin};
-    padding: ${(props) => props.padding};
-    border: ${(props) => props.border};
-    background-color: ${(props) => props.backgroundcolor};
-    filter: ${(props => props.filter)};
-    overflow-y: ${(props) => props.overflowy};
-    overflow-x: ${(props) => props.overflowx};
-    overscroll-behavior-y: ${(props) => props.overscrolly};
-    overscroll-behavior-x: ${(props) => props.overscrollx};
-    scroll-snap-type: ${(props) => props.scrollsnap};
-    scrollbar-width: none;
-    ::-webkit-scrollbar{
-      display: none;
-    }
-
-    @media (${theme.breakpoints.sm}) {
-        grid-template-columns: ${(props) => props.templatecolssm};
-        grid-template-rows: ${(props) => props.templaterowssm};
-        gap: ${(props) => props.gapsm};
-        column-gap: ${(props) => props.columngapsm};
-        row-gap: ${(props) => props.rowgapsm};
-        padding: ${(props) => props.paddingsm};
-        justify-content: ${(props) => props.justifycontentsm};
-        justify-items: ${(props) => props.justifyitemssm};
-        align-items: ${(props) => props.alignitemssm};
-        width: ${(props) => props.widthsm};
-        height: ${(props) => props.heightsm};
-    }
-
-    @media (${theme.breakpoints.md}) {
-        grid-template-columns: ${(props) => props.templatecolsmd};
-        grid-template-rows: ${(props) => props.templaterowsmd};
-        gap: ${(props) => props.gapmd};
-        column-gap: ${(props) => props.columngapmd};
-        row-gap: ${(props) => props.rowgapmd};
-        padding: ${(props) => props.paddingmd};
-        justify-content: ${(props) => props.justifycontentmd};
-        justify-items: ${(props) => props.justifyitemsmd};
-        align-items: ${(props) => props.alignitemsmd};
-        width: ${(props) => props.widthmd};
-        height: ${(props) => props.heightmd};
-    }
-
-    @media (${theme.breakpoints.lg}) {
-        grid-template-columns: ${(props) => props.templatecolslg};
-        grid-template-rows: ${(props) => props.templaterowslg};
-        gap: ${(props) => props.gaplg};
-        column-gap: ${(props) => props.columngaplg};
-        row-gap: ${(props) => props.rowgaplg};
-        margin: ${(props) => props.marginlg};
-        padding: ${(props) => props.paddinglg};
-        justify-content: ${(props) => props.justifycontentlg};
-        justify-items: ${(props) => props.justifyitemslg};
-        align-items: ${(props) => props.alignitemslg};
-        width: ${(props) => props.widthlg};
-        height: ${(props) => props.heightlg};
-    }
-
-    @media (${theme.breakpoints.xl}) {
-        grid-template-columns: ${(props) => props.templatecolsxl};
-        grid-template-rows: ${(props) => props.templaterowsxl};
-        gap: ${(props) => props.gapxl};
-        column-gap: ${(props) => props.columngapxl};
-        row-gap: ${(props) => props.rowgapxl};
-        margin: ${(props) => props.marginxl};
-        padding: ${(props) => props.paddingxl};
-        justify-content: ${(props) => props.justifycontentxl};
-        justify-items: ${(props) => props.justifyitemsxl};
-        align-items: ${(props) => props.alignitemsxl};
-        width: ${(props) => props.widthxl};
-        height: ${(props) => props.heightxl};
-    }
-
-    @media (${theme.breakpoints.xxl}) {
-        column-gap: ${(props) => props.columngapxxl};
+        padding: ${(props) => props.paddingxxl};
+        gap: ${(props) => props.gapxxl};
         row-gap: ${(props) => props.rowgapxxl};
+        column-gap: ${(props) => props.columngapxxl};
     }
 `
 
