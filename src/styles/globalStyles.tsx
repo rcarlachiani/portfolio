@@ -74,6 +74,7 @@ interface PropsContainerFlex {
     maxwidthlg?: string,
     maxwidthxl?: string,
     maxheight?: string,
+    minheight?: string,
     margin?: string,
     marginsm?: string,
     marginmd?: string,
@@ -176,6 +177,7 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
     height: ${(props) => props.height};
     max-width: ${(props) => props.maxwidth};
     max-height: ${(props) => props.maxheight};
+    min-height: ${(props) => props.minheight};
     margin: ${(props) => props.margin};
     padding: ${(props) => props.padding};
     border: ${(props) => props.border};
@@ -275,11 +277,11 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
 export const Section = styled.section<PropsSection>`
     display: flex;
     width: inherit;
-    height: 100%;
+    height: inherit;
     position: relative;
     z-index: 1;
     justify-content: ${(props) => props.justifycontent ? props.justifycontent : 'center'};
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 `
 
 export const Text = styled.p<PropsText>`

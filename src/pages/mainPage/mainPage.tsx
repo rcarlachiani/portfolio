@@ -17,8 +17,6 @@ const MainPage = () => {
             heightmd='calc(100dvh - 135px)'
             margin='80px 0px 70px 0px'
             marginmd='80px 0px 55px 0px'
-            overflowx='hidden'
-            overflowy='hidden'
             justifycontent='center'
             alignitems='center'
             gap='6dvh'

@@ -30,7 +30,7 @@ function App() {
               alignitems='center'
               overflowy='auto'
               overscrolly='contain'
-              scrollsnap='both mandatory'
+              scrollsnap='y mandatory'
               width='100%'
               height='100dvh'
               className='container'
