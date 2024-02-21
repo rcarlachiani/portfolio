@@ -6,6 +6,8 @@ interface PropsContainerFlex {
     position?: string,
     top?: string,
     bottom?: string,
+    left?: string,
+    right?: string,
     flexdirection?: string,
     flexdirectionsm?: string,
     flexdirectionmd?: string,
@@ -163,6 +165,8 @@ export const ContainerFlex = styled.div<PropsContainerFlex>`
     position: ${(props) => props.position};
     top: ${(props) => props.top};
     bottom: ${(props) => props.bottom};
+    left: ${(props) => props.left};
+    right: ${(props) => props.right};
     flex-direction: ${(props) => props.flexdirection};
     flex-wrap: ${(props) => props.flexwrap};
     flex-basis: ${(props) => props.flexbasis};

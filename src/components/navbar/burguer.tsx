@@ -1,81 +1,67 @@
-import { useState } from "react"
 import { ContainerFlex } from "../../styles/globalStyles"
-import { BurguerIcon } from "../icons/burguer-menu"
 import { Github } from "../icons/github"
 import { Gmail } from "../icons/gmail"
 import { Linkedin } from "../icons/linkedin"
 import { Wpp } from "../icons/wpp"
 import { NavbarLink } from "./navbarStyles"
+interface BurguerMenuProps {
+    open: boolean;
+}
 
-
-const Burguer = () => {
-    const [open, setOpen] = useState(false);
-
+const BurguerMenu: React.FC<BurguerMenuProps> = ({ open }) => {
     return (
-        <>
+        <ContainerFlex
+            display={open ? 'flex' : 'none'}
+            width='100%'
+            position='relative'
+        >
             <ContainerFlex 
                 justifycontent='center' 
-                flexdirection='column'
-                alignitems='center'
-                onClick={() => setOpen(!open)}
+                position='absolute'
+                padding='10px 8px'
+                top='60px'
+                right='0'
+                backgroundcolor='hsla(242.2, 49.4%, 67.45%, 0.1)'
+                backgroundblur='blur(4px)'
+                boxshadow='0px 4px 4px hsla(0deg, 0%, 0%, 0.1)'
+                borderradius='20px'
+                zindex={5}
             >
-                <BurguerIcon />
-                <ContainerFlex 
-                    justifycontent='center' 
-                    flexdirection='column'
-                    position='absolute'
-                    padding='0px 8px'
-                    top='50px'
-                    backgroundcolor='hsla(242.2, 49.4%, 67.45%, 0.1)'
-                    backgroundblur='blur(4px)'
-                    borderradius='0px 0px 15px 15px'
-                    display={open ? 'flex' : 'none'}
-                    zindex={5}
+                <NavbarLink 
+                    href='https://www.linkedin.com/in/rcarlachiani' 
+                    target='_blank'
                 >
-                    <NavbarLink 
-                        href='https://www.linkedin.com/in/rcarlachiani' 
-                        target='_blank'
-                        margin='5px 0px'
-                        padding='10px 0px 5px 0px'
-                    >
-                        <Linkedin 
-                            width='20px'
-                        />
-                    </NavbarLink>
-                    <NavbarLink 
-                        href='https://github.com/rcarlachiani' 
-                        target='_blank'
-                        margin='5px 0px'
-                        padding='5px 0px'
-                    >
-                        <Github 
-                            width='20px'
-                        />
-                    </NavbarLink>
-                    <NavbarLink 
-                        href='mailto:rcarlachiani@gmail.com' 
-                        target='_blank'
-                        margin='5px 0px'
-                        padding='5px 0px'
-                    >
-                        <Gmail 
-                            width='20px'
-                        />
-                    </NavbarLink>
-                    <NavbarLink 
-                        href='https://api.whatsapp.com/send?phone=5493425273690' 
-                        target='_blank'
-                        margin='5px 0px'
-                        padding='5px 0px 10px 0px'
-                    >
-                        <Wpp 
-                            width='20px'
-                        />
-                    </NavbarLink>
-                </ContainerFlex>
+                    <Linkedin 
+                        width='20px'
+                    />
+                </NavbarLink>
+                <NavbarLink 
+                    href='https://github.com/rcarlachiani' 
+                    target='_blank'
+                >
+                    <Github 
+                        width='20px'
+                    />
+                </NavbarLink>
+                <NavbarLink 
+                    href='mailto:rcarlachiani@gmail.com' 
+                    target='_blank'
+                >
+                    <Gmail 
+                        width='20px'
+                    />
+                </NavbarLink>
+                <NavbarLink 
+                    href='https://api.whatsapp.com/send?phone=5493425273690' 
+                    target='_blank'
+                >
+                    <Wpp 
+                        width='20px'
+                    />
+                </NavbarLink>
             </ContainerFlex>
-        </>
+        </ContainerFlex>
     )
 }
 
-export default Burguer
+export default BurguerMenu

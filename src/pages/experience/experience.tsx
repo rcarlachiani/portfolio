@@ -45,7 +45,7 @@ const Experience = () => {
                 gapxl='25px'
             >
                 {data.projects.map((project) => (
-                    <Project projectData={project}/>
+                    <Project key={project.id} projectData={project}/>
                 ))}
             </ContainerFlex>
         </ContainerFlex>

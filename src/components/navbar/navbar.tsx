@@ -1,4 +1,4 @@
-import { SetStateAction, useContext } from "react"
+import { SetStateAction, useContext, useEffect, useState } from "react"
 import { ContainerFlex } from "../../styles/globalStyles"
 import { Navbar, NavbarItem, NavbarLink } from "../navbar/navbarStyles"
 import { DeviceContext } from "../../context/context"
@@ -7,7 +7,8 @@ import { Github } from "../icons/github"
 import { Gmail } from "../icons/gmail"
 import { Wpp } from "../icons/wpp"
 import { theme } from "../../theme/theme"
-import Burguer from "./burguer"
+import { BurguerIcon } from "../icons/burguer-menu"
+import BurguerMenu from "./burguer"
 
 interface Props {
     setLanguage: React.Dispatch<SetStateAction<string>>,
@@ -15,16 +16,23 @@ interface Props {
 
 const NavbarComponent = ({ setLanguage }: Props) => {
     const { isMobile } = useContext(DeviceContext);
+    const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        !isMobile && setOpen(false)
+    }, [isMobile])
 
     return (
         <>
            <ContainerFlex
+                flexdirection='column'
                 width='100%'
                 position='absolute'
                 top='20px'
                 zindex={3} 
                 padding='0 10vw'
            >
+                <BurguerMenu open={open}/>
                 <Navbar 
                     width='inherit' 
                     height='50px' 
@@ -50,7 +58,14 @@ const NavbarComponent = ({ setLanguage }: Props) => {
                         </NavbarItem>
                     </ContainerFlex>
                     {isMobile ? (
-                        <Burguer />
+                        <ContainerFlex 
+                            justifycontent='center' 
+                            flexdirection='column'
+                            alignitems='center'
+                            onClick={() => setOpen(!open)}
+                        >
+                            <BurguerIcon />
+                        </ContainerFlex>
                     ) : (
                         <ContainerFlex alignitems='center'>
                             <NavbarLink 
