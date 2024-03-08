@@ -26,8 +26,8 @@ export const ButtonGradient = styled.button<PropsButton>`
     display: flex;
     justify-content: ${(props) => props.justifycontent};
     align-items: ${(props) => props.alignitems};
-    width: ${(props) => props.width};
-    height: ${(props) => props.height};
+    width: ${(props) => props.width ? props.width : '53px'};
+    height: ${(props) => props.height ? props.height : '20px'};
     max-width: ${(props) => props.maxwidth};
     max-height: ${(props) => props.maxheight};
     margin: ${(props) => props.margin};
@@ -39,22 +39,12 @@ export const ButtonGradient = styled.button<PropsButton>`
     cursor: pointer;
 
     @media (${theme.breakpoints.sm}) {
-        width: ${(props) => props.widthsm};
-        height: ${(props) => props.heightsm};
-    }
-
-    @media (${theme.breakpoints.md}) {
-        width: ${(props) => props.widthmd};
-        height: ${(props) => props.heightmd};
+        width: ${(props) => props.widthsm ? props.widthsm : '65px'};
+        height: ${(props) => props.heightsm ? props.heightsm : '24px'};
     }
 
     @media (${theme.breakpoints.lg}) {
-        width: ${(props) => props.widthlg};
-        height: ${(props) => props.heightlg};
-    }
-
-    @media (${theme.breakpoints.xl}) {
-        width: ${(props) => props.widthxl};
-        height: ${(props) => props.heightxl};
+        width: ${(props) => props.widthlg ? props.widthlg : '80px'};
+        height: ${(props) => props.heightlg ? props.heightlg : '28px'};
     }
 `

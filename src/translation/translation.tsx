@@ -25,6 +25,11 @@ export const TextEN = {
     aboutMe: "My journey as a developer began in 2021, when I started my formal studies in the Web Development career with ReactJS at Coderhouse, graduating in 2022.<br> In that year, I secured my first internship as a layout designer, and since then, I have been actively working as a Frontend Developer, continuing to this day with my ongoing education and growth through constant study and practice.<br> Currently, I am studying Python, also at Coderhouse, with the goal of becoming a fullstack developer.<br><br> Beyond development, I have a deep passion for music; I am a drummer, sound technician, and owner of a diverse vinyl collection, a true reflection of my musical tastes."
 }
 
+export const ButtonsEN = {
+    downloadCV: "Download Resume",
+    goToProject: "Go to site"
+}
+
 export const TitlesES = {
     greeting: "¡Hola!",
     about: "<span> Acerca</span> de mí",
@@ -50,4 +55,9 @@ export const TextES = {
         second: "Actualmente, me desempeño como Desarrollador Fullstack Junior para el <span><b>Ministerio de Hacienda y Finanzas de la Prov. de Buenos Aires</b></span> en el desarrollo de un sistema web de uso interno utilizando ReactJs, Python y Django REST Framwork, el cual tiene como objetivo oprtimizar la gestión de los recursos de los municipios."
     },
     aboutMe: "Mi camino como desarrollador comienza en 2021, año en el que ingresé en la carrera de Desarrollo Web con ReactJS de Coderhouse, de la cual me gradué en 2022.<br> Ése año, conseguí mi primer pasantía como maquetador y desde entonces, he estado trabajando de manera activa como Desarrollador Frontend, continuando con mi formación y crecimiento a través del estudio y la práctica constante.<br> Actualmente estoy estudiando Python, también en Coderhouse, con la meta de convertirme en desarrollador fullstack.<br><br> Además del desarrollo, tengo una gran pasión por la música; soy baterista, técnico de sonido y poseedor de una variada colección de vinilos, fiel reflejo de mis gustos musicales."
+}
+
+export const ButtonsES = {
+    downloadCV: "Descargar CV",
+    goToProject: "Ir al sitio"
 }

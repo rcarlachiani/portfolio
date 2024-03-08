@@ -5,6 +5,7 @@ import { LanguageContext } from "../../context/context";
 import { theme } from "../../theme/theme";
 import { IconsProjects } from "../../components/icons/icons";
 import Button from "../../components/button/button";
+import { ButtonsEN, ButtonsES } from "../../translation/translation";
 
 interface Props {
     projectData: {
@@ -94,7 +95,9 @@ const Project = ({projectData}: Props ) => {
                 />
             <ContainerFlex>
                 <ProjectLink href={projectData.url} target='_blank'>
-                    <Button />
+                    <Button 
+                        buttonText={language === 'en' ? ButtonsEN.goToProject : ButtonsES.goToProject}
+                    />
                 </ProjectLink>
             </ContainerFlex>
         </ContainerFlex>

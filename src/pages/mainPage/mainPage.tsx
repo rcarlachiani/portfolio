@@ -68,7 +68,7 @@ const MainPage = () => {
                     dangerouslySetInnerHTML={{__html: language === 'en' ? SubtitlesEN.role : SubtitlesES.role }}
                 />
             </ContainerFlex>
-            <MainPageImage src='/images/main-3d.png' />
+            <MainPageImage src='/images/main-3d.webp' />
         </ContainerFlex>
     )
 }

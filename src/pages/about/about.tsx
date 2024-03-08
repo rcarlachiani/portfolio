@@ -45,7 +45,7 @@ const About = () => {
                     gap='4dvh'
                     gaplg='80px'
                 >
-                    <AboutImage src='/images/profile-picture-perspective-II.png' />
+                    <AboutImage src='/images/profile-picture.webp' />
                     <ContainerFlex
                         overflowy='scroll'
                         padding='0 6vw'
