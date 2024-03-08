@@ -41,7 +41,7 @@ const Skills = () => {
             />
             <ContainerFlex
                 flexwrap='wrap'
-                justifycontent='center'
+                justifycontent='space-between'
                 rowgap='50px'
                 columngap='20px'
                 gapmd='25px'

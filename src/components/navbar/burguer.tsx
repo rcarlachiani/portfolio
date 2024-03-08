@@ -15,16 +15,20 @@ const BurguerMenu: React.FC<BurguerMenuProps> = ({ open }) => {
             width='100%'
             position='relative'
         >
-            <ContainerFlex 
-                justifycontent='center' 
+            <ContainerFlex
+                flexdirection='column'
+                width='50px'
+                height='160px' 
+                justifycontent='space-between' 
+                alignitems='center'
                 position='absolute'
-                padding='10px 8px'
-                top='60px'
-                right='0'
+                padding='15px 8px'
+                top='50px'
+                right='30px'
                 backgroundcolor='hsla(242.2, 49.4%, 67.45%, 0.1)'
-                backgroundblur='blur(4px)'
+                backgroundblur='blur(10px)'
                 boxshadow='0px 4px 4px hsla(0deg, 0%, 0%, 0.1)'
-                borderradius='20px'
+                borderradius='0px 0px 10px 10px'
                 zindex={5}
             >
                 <NavbarLink 

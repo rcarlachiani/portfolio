@@ -54,12 +54,11 @@ const About = () => {
                     >
                         <Text
                             color={theme.colors.purpleWhite}  
-                            fontSize='12px'
-                            fontsizesm='14px'
-                            fontsizemd='16px'
-                            fontsizelg='18px'
-                            fontsizexl='20px'
-                            fontsizexxl='26px'
+                            fontSize='11px'
+                            fontsizesm='13px'
+                            fontsizemd='14px'
+                            fontsizexl='18px'
+                            fontsizexxl='20px'
                             textalign='start'
                             dangerouslySetInnerHTML={{__html: language === 'en' ? TextEN.aboutMe : TextES.aboutMe }}
                         />

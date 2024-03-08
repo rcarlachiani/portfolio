@@ -7,9 +7,10 @@ import { theme } from './theme/theme'
 import MainPage from './pages/mainPage/mainPage'
 import ParticlesBackground from './components/particlesBackground/particlesBackground'
 import Skills from './pages/skills/skills'
-import Experience from './pages/experience/experience'
+import Works from './pages/works/works'
 import About from './pages/about/about';
 import SwipeAnimation from './components/swipeAnimation/swipeAnimation';
+import Experience from './pages/experience/experience'
 
 function App() {
   const [language, setLanguage] = useState<string>(
@@ -44,10 +45,13 @@ function App() {
                 <About />
               </Section>
               <Section>
+                <Experience />
+              </Section>
+              <Section>
                 <Skills />
               </Section>
               <Section>
-                <Experience />
+                <Works />
               </Section>
             <SwipeAnimation />
             </ContainerFlex>

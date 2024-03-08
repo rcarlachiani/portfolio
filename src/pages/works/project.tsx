@@ -25,9 +25,9 @@ const Project = ({projectData}: Props ) => {
     return (
         <ContainerFlex
             flexdirection='column'
-            flexbasis='45%'
-            flexbasismd='30%'
-            flexbasisxxl='25%'
+            flexbasis='46%'
+            flexbasissm='47%'
+            flexbasismd='31%'
             alignitems='start'
             justifycontent='space-between'
             padding='10px'

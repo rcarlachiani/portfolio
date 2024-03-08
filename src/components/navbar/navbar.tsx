@@ -71,22 +71,18 @@ const NavbarComponent = ({ setLanguage }: Props) => {
                             <NavbarLink 
                                 href='https://www.linkedin.com/in/rcarlachiani' 
                                 target='_blank'
-                                margin='0px 5px 0px 0px'
-                                padding='0px 10px 0px 0px'
                             >
                                 <Linkedin />
                             </NavbarLink>
-                            <NavbarLink href='https://github.com/rcarlachiani' target='_blank'>
+                            <NavbarLink href='https://github.com/rcarlachiani' target='_blank' margin='0px 8px 0px 16px'>
                                 <Github />
                             </NavbarLink>
-                            <NavbarLink href='mailto:rcarlachiani@gmail.com' target='_blank'>
+                            <NavbarLink href='mailto:rcarlachiani@gmail.com' target='_blank' margin='0px 16px 0px 8px'>
                                 <Gmail />
                             </NavbarLink>
                             <NavbarLink 
                                 href='https://api.whatsapp.com/send?phone=5493425273690' 
                                 target='_blank'
-                                margin='0px 0px 0px 5px'
-                                padding='0px 0px 0px 10px'
                             >
                                 <Wpp />
                             </NavbarLink>
