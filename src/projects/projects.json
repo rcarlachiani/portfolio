@@ -6,7 +6,13 @@
       "titleES": "<span>Dot</span> Hotels",
       "subtitleEN": "Layout | Bugfix.<br> Project realized at <span><b>Genosha</b></span>.",
       "subtitleES": "Maquetado | Bugfix.<br>Proyecto realizado en <span><b>Genosha</b></span>.",
-      "technologies": ["HTML5", "CSS3", "Bootstrap", "Javascript", "Handlebars"],
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "Javascript",
+        "Handlebars"
+      ],
       "image": "./images/dot-responsive.png",
       "url": "https://dot-hotels.com/portal/es-es/p19/DOTHotels"
     },
@@ -16,7 +22,13 @@
       "titleES": "Juicios de <span>Lesa</span>",
       "subtitleEN": "Development | Bugfix | API REST integration.<br> Project realized at <span><b>Genosha</b></span>.",
       "subtitleES": "Desarrollo | Bugfix | Integración API REST.<br>Proyecto realizado en <span><b>Genosha</b></span>.",
-      "technologies": ["HTML5", "NextJs", "styled-components", "Recharts", "Mapbox"],
+      "technologies": [
+        "HTML5",
+        "NextJs",
+        "styled-components",
+        "Recharts",
+        "Mapbox"
+      ],
       "image": "./images/lesa-responsive.png",
       "url": "http://www.juiciosdelesahumanidad.ar/"
     },
@@ -28,7 +40,7 @@
       "subtitleES": "Desarrollo | Integración <span><b>API Google Sheets</b></span> |<br> Envío de email.",
       "technologies": ["HTML5", "NextJs", "TailwindCSS"],
       "image": "./images/shift-register-responsive.png",
-      "url": "https://turnera-con-registro-y-cuenta-regresiva-ek0wlmuiw-rcarlachiani.vercel.app/"
+      "url": "https://turnera-con-registro-y-cuenta-regresiva.vercel.app/"
     },
     {
       "id": "per2",
@@ -38,14 +50,14 @@
       "subtitleES": "Maquetado | Desarrollo<br>Challenge <span><b>©Frontend Mentor.</b></span>",
       "technologies": ["HTML5", "ReactJs", "styled-components"],
       "image": "./images/ip-tracker-responsive.png",
-      "url": "https://ip-address-tracker-challenge-ojbnf75gh-rcarlachiani.vercel.app/"
+      "url": "https://ip-address-tracker-challenge-two.vercel.app/"
     },
     {
       "id": "per3",
       "titleEN": "Online <span>store</span>",
       "titleES": "<span>Tienda</span> online",
-      "subtitleEN": "Layout | development<br>Final project | <span><b>Coderhouse</b></span> Frontend Career.",
-      "subtitleES": "Maquetado | Desarrollo<br>Trabajo final | Carrera Frontend <span><b>Coderhouse.</b></span>",
+      "subtitleEN": "Layout | Development | <span><b>Firebase</b></span> integration <br>Final project | <span><b>Coderhouse</b></span> Frontend Career.",
+      "subtitleES": "Maquetado | Desarrollo | Integración <span><b>Firebase</b></span><br>Trabajo final | Carrera Frontend <span><b>Coderhouse.</b></span>",
       "technologies": ["HTML5", "ReactJs", "Bootstrap", "Firebase"],
       "image": "./images/drumstore-responsive.png",
       "url": "https://proyecto-final-react-js.vercel.app/"
